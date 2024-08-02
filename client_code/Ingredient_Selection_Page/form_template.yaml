@@ -8,7 +8,7 @@ components:
   layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
   components:
   - name: label_1
-    properties: {text: Unselect all the ingredients you don't have at home, bold: true, font_size: 32}
+    properties: {text: Deselect all the ingredients you don't have at home, bold: true, font_size: 32, align: center}
     type: Label
     layout_properties: {grid_position: 'WXCSWX,PXYBRR'}
   - name: spacer_1
@@ -21,16 +21,20 @@ components:
     layout_properties: {grid_position: 'YORZTE,DFISDP'}
     components:
     - name: image_1
-      properties: {role: rounded-image}
+      properties: {role: rounded-image, source: _/theme/tomatos.png}
       type: Image
       layout_properties: {grid_position: 'PEYEVN,JSXMGQ'}
+  - name: spacer_3
+    properties: {height: '90'}
+    type: Spacer
+    layout_properties: {grid_position: 'YORZTE,PCXOXZ GDRAZK,CQXQQH'}
   - name: column_panel_3
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'YORZTE,PCXOXZ'}
+    layout_properties: {grid_position: 'YORZTE,PCXOXZ BCGCCC,YNTUEL'}
     components:
     - name: image_2
-      properties: {role: rounded-image}
+      properties: {role: rounded-image, source: _/theme/flour.png}
       type: Image
       layout_properties: {grid_position: 'BVSYZE,EYNQUS'}
   - name: column_panel_4
@@ -39,7 +43,7 @@ components:
     layout_properties: {grid_position: 'YORZTE,XWJYXY'}
     components:
     - name: image_3
-      properties: {role: rounded-image}
+      properties: {role: rounded-image, source: _/theme/noodles.png}
       type: Image
       layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
   - name: column_panel_5

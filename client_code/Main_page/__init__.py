@@ -15,3 +15,7 @@ class Main_page(Main_pageTemplate):
     self.init_components(**properties)
     while not anvil.users.login_with_form(allow_cancel=True):
       pass
+
+  def elevated_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Ingredient_Selection_Page')

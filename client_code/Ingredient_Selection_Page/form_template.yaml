@@ -8,9 +8,13 @@ components:
   layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
   components:
   - name: label_1
-    properties: {text: Select all the ingredients you have at home, bold: true, font_size: 32}
+    properties: {text: Unselect all the ingredients you don't have at home, bold: true, font_size: 32}
     type: Label
     layout_properties: {grid_position: 'WXCSWX,PXYBRR'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'SCQWQU,HENZFW'}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel
@@ -39,7 +43,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
   - name: column_panel_5
-    properties: {background: '#fff'}
+    properties: {background: '#fff', role: tonal-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'BIRZSS,TINHRP'}
     components:
@@ -53,8 +57,60 @@ components:
       layout_properties: {grid_position: 'URIHHL,EPTLPJ'}
       components:
       - name: check_box_1
-        properties: {text: Carrots, background: '#e1e1e1', checked: true, enabled: true, foreground: '', font_size: 18, role: null}
+        properties: {text: Carrots, checked: true, font_size: 18}
         type: CheckBox
-        layout_properties: {grid_position: 'BEPSOD,MMIEAD', row_background: ''}
-        data_bindings: []
+        layout_properties: {grid_position: 'DLASWD,IJDACL'}
+    - name: check_box_2
+      properties: {text: Chicken, checked: true, font_size: 18}
+      type: CheckBox
+      layout_properties: {grid_position: 'QPUFCV,YYIMDV'}
+    - name: check_box_3
+      properties: {text: Flour, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'DPHJDI,ZNXHDR'}
+    - name: check_box_4
+      properties: {text: Sugar, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'RCYFBF,COWWIE'}
+    - name: check_box_5
+      properties: {text: Olive Oil, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'IMOXXI,TZDWGF'}
+    - name: check_box_6
+      properties: {text: Beef, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'VATHZC,JBSPMA'}
+    - name: check_box_7
+      properties: {text: Onion, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'JRSYMK,YUZTOO'}
+    - name: check_box_9
+      properties: {text: Garlic, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: ''}
+    - name: check_box_8
+      properties: {text: Milk, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: ''}
+    - name: check_box_10
+      properties: {text: Butter, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'ZGDYVI,LZQHEI'}
+    - name: check_box_11
+      properties: {text: Salt, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'NWYSWR,YNZXKP'}
+    - name: check_box_12
+      properties: {text: Pepper, checked: true}
+      type: CheckBox
+      layout_properties: {grid_position: 'DXNEXR,JIALRR'}
+  - name: column_panel_7
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AOUPZM,TYMJLV'}
+    components:
+    - name: spacer_2
+      properties: {height: '95'}
+      type: Spacer
+      layout_properties: {grid_position: 'IGIYWQ,KAHVRC'}
 is_package: true

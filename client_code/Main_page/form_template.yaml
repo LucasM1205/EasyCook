@@ -64,6 +64,7 @@ components:
         properties: {text: Find a recepie, role: elevated-button, bold: true, font_size: 24}
         type: Button
         layout_properties: {grid_position: 'SOVOGB,QMRTWN HVDVQB,RBSIVT'}
+        event_bindings: {click: elevated_button_1_click}
       - name: image_2
         properties: {role: rounded-image}
         type: Image

@@ -66,6 +66,10 @@ roles:
   components: [Checkbox]
   display_in_toolbox: true
   title: Rounded-Edges-Checkbox
+- name: rounded-checkbox
+  components: [Checkbox]
+  display_in_toolbox: true
+  title: Rounded Checkbox
 color_scheme:
   preset_groups:
   - name: Colour Scheme

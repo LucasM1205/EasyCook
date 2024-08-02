@@ -18,4 +18,4 @@ class Landing_page(Landing_pageTemplate):
 
   def get_started_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Login_page')
+    open_form('Main_page')

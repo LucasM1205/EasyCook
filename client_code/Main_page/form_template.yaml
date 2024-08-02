@@ -64,4 +64,8 @@ components:
         properties: {}
         type: Image
         layout_properties: {grid_position: 'SOVOGB,TNUAPP'}
+  - name: spacer_4
+    properties: {height: '95'}
+    type: Spacer
+    layout_properties: {grid_position: 'TMLPVD,PCYJVG'}
 is_package: true

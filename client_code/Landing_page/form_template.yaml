@@ -1,26 +1,22 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', background: ''}
 components:
 - name: column_panel_1
-  properties: {}
+  properties: {role: null}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
   - name: spacer_1
     properties: {height: '190'}
     type: Spacer
-    layout_properties: {grid_position: 'EKBQKI,HNCXGU'}
-  - name: image_1
-    properties: {source: _/theme/Landing_page_background.jpg, display_mode: original_size}
-    type: Image
-    layout_properties: {grid_position: 'QPBNHL,OULTLW'}
+    layout_properties: {grid_position: 'EKBQKI,HNCXGU', row_background: ''}
   - name: label_1
-    properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 30}
+    properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 30, background: ''}
     type: Label
     layout_properties: {grid_position: 'AXTHJM,OOYAYD'}
   - name: spacer_2
-    properties: {height: '190'}
+    properties: {height: '95'}
     type: Spacer
     layout_properties: {grid_position: 'ICSBVO,WQOPDI'}

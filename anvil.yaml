@@ -55,50 +55,52 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   ingredients:
+    title: Ingredients
     client: search
     server: full
     columns:
     - name: IngredientID
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: number
     - name: Name
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: Category
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
-    title: Ingredients
   recipes:
+    title: Recipes
     client: search
     server: full
     columns:
     - name: RecipeID
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: Name
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: Description
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
     - name: Category
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {width: 200}
       type: string
     - name: PreparationTime
-      admin_ui: {width: 200, order: 4}
+      admin_ui: {width: 200}
       type: number
-    title: Recipes
   recipeingredients:
+    title: RecipeIngredients
     client: search
     server: full
     columns:
-    - name: RecipeID
-      admin_ui: {width: 200, order: 0}
-      type: number
-    - name: IngridientID
-      admin_ui: {width: 200, order: 1}
-      type: number
     - name: Cuantity
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: number
-    title: RecipeIngredients
+    - name: RecipeID
+      admin_ui: {order: -1, width: 200}
+      type: link_single
+      target: recipes
+    - name: IngridientIDs_2
+      admin_ui: {order: 0.5, width: 200}
+      type: link_single
+      target: ingredients

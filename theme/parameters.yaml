@@ -1,19 +1,21 @@
 roles:
 - name: input-prompt
   components: [Label]
+  display_in_toolbox: true
 - name: selected
   components: [Link]
+  display_in_toolbox: true
 - name: outlined-card
   components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
   display_in_toolbox: true
   title: Outlined Card
 - name: elevated-card
   components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
-  display_in_toolbox: false
+  display_in_toolbox: true
   title: Elevated Card
 - name: tonal-card
   components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
-  display_in_toolbox: false
+  display_in_toolbox: true
   title: Tonal Card
 - name: outlined-button
   components: [Button, FileLoader]
@@ -21,15 +23,15 @@ roles:
   title: Outlined Button
 - name: filled-button
   components: [Button, FileLoader]
-  display_in_toolbox: false
+  display_in_toolbox: true
   title: Filled Button
 - name: elevated-button
   components: [Button, FileLoader]
-  display_in_toolbox: false
+  display_in_toolbox: true
   title: Elevated Button
 - name: tonal-button
   components: [Button, FileLoader]
-  display_in_toolbox: false
+  display_in_toolbox: true
   title: Tonal Button
 - name: outlined
   components: [TextBox, TextArea, DatePicker, DropDown]
@@ -37,18 +39,25 @@ roles:
   title: Outlined TextBox
 - name: display
   components: [Label, Link]
+  display_in_toolbox: true
 - name: headline
   components: [Label, Link]
+  display_in_toolbox: true
 - name: title
   components: [Label, Link]
+  display_in_toolbox: true
 - name: body
   components: [Label, Link]
+  display_in_toolbox: true
 - name: tonal-data-grid
   components: [DataGrid]
+  display_in_toolbox: true
 - name: outlined-error
   components: [TextBox, TextArea, DatePicker, DropDown]
+  display_in_toolbox: true
 - name: input-error
   components: [TextBox, TextArea, DatePicker, DropDown]
+  display_in_toolbox: true
 color_scheme:
   preset_groups:
   - name: Colour Scheme

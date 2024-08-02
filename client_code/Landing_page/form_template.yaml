@@ -1,0 +1,26 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - name: spacer_1
+    properties: {height: '190'}
+    type: Spacer
+    layout_properties: {grid_position: 'EKBQKI,HNCXGU'}
+  - name: image_1
+    properties: {source: _/theme/Landing_page_background.jpg, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'QPBNHL,OULTLW'}
+  - name: label_1
+    properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'AXTHJM,OOYAYD'}
+  - name: spacer_2
+    properties: {height: '190'}
+    type: Spacer
+    layout_properties: {grid_position: 'ICSBVO,WQOPDI'}

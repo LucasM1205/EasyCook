@@ -1,7 +1,7 @@
 allow_embedding: false
-package_name: EasyCookTest
-name: EasyCookTest
-startup_form: Form1
+package_name: EasyCook2
+name: EasyCook2
+startup_form: null
 renamed: true
 runtime_options:
   version: 2
@@ -13,3 +13,5 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+metadata: {title: EasyCook, logo_img: 'asset:EasyCook_logo.png'}
+startup: {type: form, module: Landing_page}

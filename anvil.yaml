@@ -54,3 +54,51 @@ db_schema:
     - name: email_confirmation_key
       admin_ui: {width: 200}
       type: string
+  ingredients:
+    client: search
+    server: full
+    columns:
+    - name: IngredientID
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: Name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Category
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: Ingredients
+  recipes:
+    client: search
+    server: full
+    columns:
+    - name: RecipeID
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Description
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Category
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: PreparationTime
+      admin_ui: {width: 200, order: 4}
+      type: number
+    title: Recipes
+  recipeingredients:
+    client: search
+    server: full
+    columns:
+    - name: RecipeID
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: IngridientID
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: Cuantity
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: RecipeIngredients

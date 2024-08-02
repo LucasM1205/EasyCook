@@ -4,7 +4,8 @@ unique_ids:
     Login_page: '172257769130992346007602.73892'
     Main_page: '1722580328870516618840437.3695'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1722589451062246486352594.87262'
   assets:
     EasyCook_logo.png: '1722571308508302177939521.8822'
     Landing_page_background.jpg: '1722572285998616870000353.6569'

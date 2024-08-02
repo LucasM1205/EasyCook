@@ -59,7 +59,9 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
   display_in_toolbox: true
 - name: rounded-image
-  components: []
+  components: [Image]
+  display_in_toolbox: true
+  title: round-images
 color_scheme:
   preset_groups:
   - name: Colour Scheme

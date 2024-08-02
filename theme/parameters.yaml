@@ -58,6 +58,8 @@ roles:
 - name: input-error
   components: [TextBox, TextArea, DatePicker, DropDown]
   display_in_toolbox: true
+- name: rounded-image
+  components: []
 color_scheme:
   preset_groups:
   - name: Colour Scheme

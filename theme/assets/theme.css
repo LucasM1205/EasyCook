@@ -155,6 +155,11 @@ color: %color:On Primary Container%;
   padding-bottom: 0;
 }
 
+.anvil-role-rounded-image {
+    border-radius: 15px; /* Passe den Wert nach deinen Bedürfnissen an */
+    overflow: hidden; /* Um sicherzustellen, dass abgerundete Ecken wirken */
+}
+
 /* Page structure: App bar with optional left nav */
 .structure {
 /*   display: flex;

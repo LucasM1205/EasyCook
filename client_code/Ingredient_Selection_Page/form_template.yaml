@@ -1,0 +1,60 @@
+container:
+  type: ColumnPanel
+  properties: {background: '#e1e1e1'}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
+  components:
+  - name: label_1
+    properties: {text: Select all the ingredients you have at home, bold: true, font_size: 32}
+    type: Label
+    layout_properties: {grid_position: 'WXCSWX,PXYBRR'}
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'YORZTE,DFISDP'}
+    components:
+    - name: image_1
+      properties: {role: rounded-image}
+      type: Image
+      layout_properties: {grid_position: 'PEYEVN,JSXMGQ'}
+  - name: column_panel_3
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'YORZTE,PCXOXZ'}
+    components:
+    - name: image_2
+      properties: {role: rounded-image}
+      type: Image
+      layout_properties: {grid_position: 'BVSYZE,EYNQUS'}
+  - name: column_panel_4
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'YORZTE,XWJYXY'}
+    components:
+    - name: image_3
+      properties: {role: rounded-image}
+      type: Image
+      layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
+  - name: column_panel_5
+    properties: {background: '#fff'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BIRZSS,TINHRP'}
+    components:
+    - name: label_2
+      properties: {text: Ingredients, bold: true, font_size: 24}
+      type: Label
+      layout_properties: {grid_position: 'VRSLWF,BVNGVF'}
+    - name: column_panel_6
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'URIHHL,EPTLPJ'}
+      components:
+      - name: check_box_1
+        properties: {text: Carrots, background: '#e1e1e1', checked: true, enabled: true, foreground: '', font_size: 18}
+        type: CheckBox
+        layout_properties: {grid_position: 'BEPSOD,MMIEAD', row_background: ''}
+        data_bindings: []
+is_package: true

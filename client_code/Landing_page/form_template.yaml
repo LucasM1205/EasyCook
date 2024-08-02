@@ -19,7 +19,7 @@ components:
     layout_properties: {grid_position: 'SRRIJC,UXHNVF'}
     components:
     - name: label_1
-      properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 30, background: '', role: null}
+      properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 32, background: '', role: null}
       type: Label
       layout_properties: {grid_position: 'CILVPH,IZXNAC'}
     data_bindings: []
@@ -33,7 +33,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: get_started
-    properties: {role: elevated-button, bold: false, spacing_above: none, background: '#c8b192', font: '', foreground: '#000', spacing_below: large, italic: false, font_size: 30, text: Get Started}
+    properties: {role: elevated-button, bold: false, spacing_above: none, background: '#c8b192', font: '', foreground: '#000', spacing_below: large, italic: false, font_size: 32, text: Get Started}
     type: Button
     layout_properties: {grid_position: 'IWTANK,YQLSWP', full_width_row: false, row_background: ''}
     event_bindings: {click: get_started_click}

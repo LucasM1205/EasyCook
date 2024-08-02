@@ -62,6 +62,10 @@ roles:
   components: [Image]
   display_in_toolbox: true
   title: round-images
+- name: rounded-edges-checkbox
+  components: [Checkbox]
+  display_in_toolbox: true
+  title: Rounded-Edges-Checkbox
 color_scheme:
   preset_groups:
   - name: Colour Scheme

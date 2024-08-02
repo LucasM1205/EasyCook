@@ -1051,3 +1051,31 @@ div.plot-container.plotly svg.main-svg {
 .anvil-spinner {
     --anvil-spinner-bg: %color:Surface Variant%;
 }
+
+/* CSS zum Anpassen der Checkbox */
+.anvil-role-custom-checkbox input[type="checkbox"] {
+    -webkit-appearance: none; /* Entferne das Standard-Aussehen */
+    -moz-appearance: none; /* Entferne das Standard-Aussehen */
+    appearance: none; /* Entferne das Standard-Aussehen */
+    width: 20px;
+    height: 20px;
+    border-radius: 5px; /* Abgerundete Kanten */
+    background-color: #e1e1e1; /* Hintergrundfarbe */
+    display: inline-block;
+    position: relative;
+}
+
+.anvil-role-custom-checkbox input[type="checkbox"]:checked {
+    background-color: #4caf50; /* Farbe, wenn ausgewählt */
+}
+
+.anvil-role-custom-checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white; /* Farbe des Häkchens */
+    border-radius: 3px;
+}

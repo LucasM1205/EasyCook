@@ -22,19 +22,7 @@ components:
       properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 30, background: '', role: null}
       type: Label
       layout_properties: {grid_position: 'CILVPH,IZXNAC'}
-    data_bindings:
-    - property: border
-      code: |-
-        self.item['self.item['style'] = {
-            'border-radius': '10px',  # Passe den Wert nach Bedarf an
-            'background-color': '#c8b192',
-            'font-style': 'italic',
-            'color': '#888',
-            'margin': '3em',
-            'padding': '1em'  # Optional: Adds some padding to the block
-        }
-        ']
-      writeback: false
+    data_bindings: []
   - name: spacer_2
     properties: {height: '95'}
     type: Spacer
@@ -48,3 +36,4 @@ components:
     properties: {role: elevated-button, bold: false, spacing_above: none, background: '#c8b192', font: '', foreground: '#000', spacing_below: large, italic: false, font_size: 30, text: Get Started}
     type: Button
     layout_properties: {grid_position: 'IWTANK,YQLSWP', full_width_row: false, row_background: ''}
+    event_bindings: {click: get_started_click}

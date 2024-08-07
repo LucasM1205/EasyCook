@@ -10,7 +10,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'QJWJDU,YHTBPF'}
   - name: repeating_panel_ingredients
-    properties: {item_template: Main_page.Veggie_category.RecipeDetailForm.ItemTemplate4}
+    properties: {item_template: Main_page.Veggie_category.RecipesDetailForm.ItemTemplate4}
     type: RepeatingPanel
     layout_properties: {grid_position: 'UJRSKQ,VPIXFA'}
 is_package: true

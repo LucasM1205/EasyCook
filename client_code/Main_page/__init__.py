@@ -30,4 +30,4 @@ class Main_page(Main_pageTemplate):
 
   def elevated_button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Main_page.Sweat_category')
+    open_form('Main_page')

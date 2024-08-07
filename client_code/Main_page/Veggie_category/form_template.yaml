@@ -44,7 +44,6 @@ components:
     - {id: VJQQOR, title: Description, data_key: Description}
     - {id: OJLQEN, title: Category, data_key: Category}
     - {id: MQDMRR, data_key: PreparationTime, title: Preparation Time (minutes)}
-    - {id: CKWAHP, data_key: Link, title: Link to recipe}
     background: '#c8b192'
     role: tonal-data-grid
     wrap_on: never

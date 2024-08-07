@@ -1,6 +1,10 @@
 is_package: true
 container:
   type: DataRowPanel
-  properties: {auto_display_data: true}
+  properties: {auto_display_data: true, background: ''}
   data_bindings: []
-components: []
+components:
+- name: button_1
+  properties: {text: button_1}
+  type: Button
+  layout_properties: {column: MQDMRR}

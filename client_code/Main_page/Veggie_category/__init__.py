@@ -14,7 +14,7 @@ class Veggie_category(Veggie_categoryTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)  
     self.repeating_panel_1.items = app_tables.recipes.search(Category="Veggie")
-    # Any code you write here will run before the form opens.
+  # Any code you write here will run before the form opens.
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""

@@ -1,3 +1,7 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: link_1
+  properties: {text: Press here for further information, background: '#ffff'}
+  type: Link
+  layout_properties: {column: FDLTXJ}

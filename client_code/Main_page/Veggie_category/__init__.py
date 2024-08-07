@@ -13,7 +13,7 @@ class Veggie_category(Veggie_categoryTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    # Suche nach allen Rezepten mit der Kategorie 'Veggie'
     self.repeating_panel_1.items = app_tables.recipes.search(Category='Veggie')
 
     # Any code you write here will run before the form opens.

@@ -340,7 +340,7 @@ color_scheme:
   - {name: Surface, color: '#FFFBFE'}
   - {name: On Background, color: '#1C1B1F'}
   - {name: On Surface, color: '#1C1B1F'}
-  - {name: Surface Variant, color: '#E7E0EC'}
+  - {name: Surface Variant, color: '#ffff'}
   - {name: On Surface Variant, color: '#49454E'}
   - {name: Outline, color: '#79747E'}
   - {name: On Disabled, color: 'rgba(28, 27, 31, 0.38)'}

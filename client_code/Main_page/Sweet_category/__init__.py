@@ -1,4 +1,4 @@
-from ._anvil_designer import Sweat_categoryTemplate
+from ._anvil_designer import Sweet_categoryTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,10 +9,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Sweat_category(Sweat_categoryTemplate):
+class Sweet_category(Sweet_categoryTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    self.repeating_panel_1.items = app_tables.recipes.search(Category="Dessert")
 
     # Any code you write here will run before the form opens.
 

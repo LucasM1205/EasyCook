@@ -37,4 +37,20 @@ components:
   properties: {height: '64'}
   type: Spacer
   layout_properties: {grid_position: 'CURHKZ,UWIKFT'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Name, data_key: Name}
+    - {id: VJQQOR, title: Description, data_key: Description}
+    - {id: OJLQEN, title: Category, data_key: Category}
+    - {id: MQDMRR, data_key: PreparationTime, title: Preparation Time}
+    - {id: CKWAHP, data_key: Link, title: Link to recipe}
+    background: '#c8b192'
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: Main_page.Veggie_category.RowTemplate1}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'NZJZZV,SYMITE'}
 is_package: true

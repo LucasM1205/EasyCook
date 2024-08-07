@@ -1,4 +1,4 @@
-from ._anvil_designer import Meat_categoryTemplate
+from ._anvil_designer import RowTemplate2Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,19 +9,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Meat_category(Meat_categoryTemplate):
+class RowTemplate2(RowTemplate2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.repeating_panel_1.items = app_tables.recipes.search(Category="Meat")
-
     # Any code you write here will run before the form opens.
-
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
-
-  def link_2_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("Main_page")

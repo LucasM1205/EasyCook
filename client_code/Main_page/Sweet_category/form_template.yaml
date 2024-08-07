@@ -26,15 +26,31 @@ components:
       layout_properties: {grid_position: 'IHIXXV,ABRXFF'}
     event_bindings: {click: link_2_click}
   - name: image_1
-    properties: {source: _/theme/veggie.png, background: '#c8b192', role: rounded-image}
+    properties: {source: _/theme/dessert.png, background: '#c8b192', role: rounded-image}
     type: Image
     layout_properties: {grid_position: 'WEYJPK,TQWUIJ'}
   - name: label_1
-    properties: {text: Recipes for Sweets/Desserts, bold: true, font_size: 32, background: '#e1e1e1', role: null}
+    properties: {text: Sweats recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null}
     type: Label
     layout_properties: {grid_position: 'GSRCDR,FVQOXO'}
 - name: spacer_1
   properties: {height: '64'}
   type: Spacer
   layout_properties: {grid_position: 'CURHKZ,UWIKFT'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Name, data_key: Name}
+    - {id: VJQQOR, title: Description, data_key: Description}
+    - {id: OJLQEN, title: Category, data_key: Category}
+    - {id: SUMYCI, data_key: PreparationTime, title: Preparation Time}
+    - {id: PHDUSK, data_key: Link, title: Link to recipe}
+    background: '#c8b192'
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: Main_page.Sweet_category.RowTemplate2}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'RALWAI,FCRZHC'}
 is_package: true

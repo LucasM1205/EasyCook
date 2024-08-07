@@ -1,9 +1,13 @@
 unique_ids:
   forms:
     Main_page.Sweet_category.RowTemplate2: '1723014543763698018406301.8296'
+    Main_page.Veggie_category.RowTemplate1.ItemTemplate2: '1723018098098258035854376.09012'
     Main_page.Meat_category: '1723014454370877583652348.0991'
+    Main_page.Veggie_category.RowTemplate1.ItemTemplate3: '1723018107178648126691902.9993'
+    Main_page.Veggie_category.RowTemplate1.ItemTemplate1: '1723018089662877212725386.4253'
     Main_page.Veggie_category.RowTemplate1: '1723011591616373412735368.26434'
     Main_page.Veggie_category: '1723011168641163776449402.11212'
+    Main_page.Veggie_category.RecipeDetailForm: '1723020327619241717676330.12653'
     Main_page.Sweet_category: '1723014457696645095801815.252'
     Main_page.Meat_category.RowTemplate3: '1723014803309118386495186.28407'
     Ingredient_Selection_Page: '1722592759310594404886449.5326'

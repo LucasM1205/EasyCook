@@ -19,3 +19,15 @@ class Main_page(Main_pageTemplate):
   def elevated_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Ingredient_Selection_Page')
+
+  def elevated_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main_page.Veggie_category')
+
+  def elevated_button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main_page.Meat_category')
+
+  def elevated_button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main_page.Sweat_category')

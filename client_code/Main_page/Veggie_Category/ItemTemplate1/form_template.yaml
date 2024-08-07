@@ -1,5 +1,0 @@
-is_package: true
-container:
-  type: ColumnPanel
-  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
-components: []

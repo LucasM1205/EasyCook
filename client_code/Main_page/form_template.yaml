@@ -100,6 +100,7 @@ components:
         properties: {text: Veggie, role: elevated-button, font_size: 18}
         type: Button
         layout_properties: {grid_position: 'HTQQAT,HBPDKP'}
+        event_bindings: {click: elevated_button_2_click}
     - name: column_panel_11
       properties: {}
       type: ColumnPanel
@@ -113,6 +114,7 @@ components:
         properties: {text: Meat, role: elevated-button, font_size: 18}
         type: Button
         layout_properties: {grid_position: 'ENBSLE,WGRZBO'}
+        event_bindings: {click: elevated_button_3_click}
     - name: column_panel_9
       properties: {}
       type: ColumnPanel
@@ -126,6 +128,7 @@ components:
         properties: {text: Sweets, role: elevated-button, font_size: 18}
         type: Button
         layout_properties: {grid_position: 'HEDYDE,RGEINO'}
+        event_bindings: {click: elevated_button_4_click}
     - name: spacer_6
       properties: {height: '95'}
       type: Spacer

@@ -331,9 +331,9 @@ color_scheme:
   - {name: Secondary Container, color: '#c8b192'}
   - {name: On Secondary, color: '#FFFFFF'}
   - {name: On Secondary Container, color: '#c8b192'}
-  - {name: Tertiary, color: '#7D5260'}
-  - {name: Tertiary Container, color: '#FFD8E4'}
-  - {name: On Tertiary, color: '#FFFFFF'}
+  - {name: Tertiary, color: '#e1e1e1'}
+  - {name: Tertiary Container, color: '#FFFFFF'}
+  - {name: On Tertiary, color: '#1C1B1F'}
   - {name: On Tertiary Container, color: '#370B1E'}
   - {name: Error, color: '#B3261E'}
   - {name: Background, color: '#FFFBFE'}

@@ -44,14 +44,20 @@ components:
     - {id: VJQQOR, title: Description, data_key: Description}
     - {id: OJLQEN, title: Category, data_key: Category}
     - {id: MQDMRR, data_key: PreparationTime, title: Preparation Time (minutes)}
+    - {id: ANVTDW, data_key: column_1, title: Ingredients}
     background: '#c8b192'
     role: tonal-data-grid
     wrap_on: never
+    rows_per_page: 5
+    show_page_controls: true
+    auto_header: true
+    foreground: ''
   type: DataGrid
   components:
   - name: repeating_panel_1
-    properties: {item_template: Main_page.Veggie_category.RowTemplate1}
+    properties: {item_template: Main_page.Veggie_category.RowTemplate1, visible: true}
     type: RepeatingPanel
     event_bindings: {show: repeating_panel_1_show}
+    layout_properties: {}
   layout_properties: {grid_position: 'NZJZZV,SYMITE'}
 is_package: true

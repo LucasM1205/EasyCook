@@ -5,6 +5,6 @@ container:
   data_bindings: []
 components:
 - name: button_1
-  properties: {text: button_1}
+  properties: {text: Press here for further information, border: '', foreground: '', background: '#ffff'}
   type: Button
-  layout_properties: {column: MQDMRR}
+  layout_properties: {column: ANVTDW}

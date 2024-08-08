@@ -13,8 +13,18 @@ class Main_page(Main_pageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.search_results_panel.items = []  # Initial leere Suchergebnisse
     while not anvil.users.login_with_form(allow_cancel=True):
       pass
+
+  def search_box_change(self, **event_args):
+    """This method is called when the user types in the search box"""
+    keyword = self.search_box.text
+    if keyword:
+      results = anvil.server.call('search_recipes', keyword)
+      self.search_results_panel.items = results
+    else:
+      self.search_results_panel.items = [] # Keine Suchergebnisse, wenn kein Keyword eingegeben
 
   def elevated_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""

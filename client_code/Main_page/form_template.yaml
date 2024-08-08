@@ -30,9 +30,18 @@ components:
     layout_properties: {grid_position: 'WMTVJK,JBKDLV'}
     components:
     - name: label_1
-      properties: {text: Search for recipes, bold: true, font_size: 32}
+      properties: {text: Search for recipe, bold: true}
       type: Label
-      layout_properties: {grid_position: 'HKPKGV,QEWRSD'}
+      layout_properties: {grid_position: 'WXZSXZ,RLXIAQ'}
+    - name: search_box
+      properties: {background: '#c8b192', foreground: '#ffff'}
+      type: TextBox
+      layout_properties: {grid_position: 'OLIRDA,IMNCIK'}
+      event_bindings: {change: search_box_change}
+    - name: search_results_panel
+      properties: {item_template: Main_page.SearchResultItem}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'QIAJUM,HADBSV'}
 - name: column_panel_section1
   properties: {}
   type: ColumnPanel

@@ -7,6 +7,16 @@ from anvil.tables import app_tables
 import anvil.server
 
 @anvil.server.callable
+def search_recipes(keyword):
+    # Abrufen aller Rezepte
+    all_recipes = app_tables.recipes.search(tables.order_by("Name"))
+    
+    # Filtern der Rezepte nach Keyword
+    matching_recipes = [recipe for recipe in all_recipes if keyword.lower() in recipe['Name'].lower()]
+    
+    return matching_recipes
+
+@anvil.server.callable
 def add_ingredient(name, category, unit):
     app_tables.ingredients.add_row(Name=name, Category=category, Unit=unit)
 

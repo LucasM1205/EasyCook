@@ -1057,3 +1057,9 @@ div.plot-container.plotly svg.main-svg {
     --anvil-spinner-bg: %color:Surface Variant%;
 }
 
+/* New role for rounded textboxes */
+.anvil-role-rounded-textbox input.anvil-component {
+  border-radius: 15px; /* Abgerundete Kanten */
+  border: 1px solid #ccc; /* Optional: Rahmenfarbe */
+  padding: 10px; /* Optional: Innenabstand */
+}

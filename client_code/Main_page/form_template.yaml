@@ -34,7 +34,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'WXZSXZ,RLXIAQ'}
     - name: search_box
-      properties: {background: '#c8b192', foreground: '#ffff'}
+      properties: {background: '#c8b192', foreground: '#ffff', role: null}
       type: TextBox
       layout_properties: {grid_position: 'OLIRDA,IMNCIK'}
       event_bindings: {change: search_box_change}

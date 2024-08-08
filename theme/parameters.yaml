@@ -70,6 +70,8 @@ roles:
   components: [Checkbox]
   display_in_toolbox: true
   title: Rounded Checkbox
+- name: rounded-textbox
+  components: [Textbox]
 color_scheme:
   preset_groups:
   - name: Colour Scheme

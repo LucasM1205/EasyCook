@@ -17,5 +17,5 @@ class RowTemplate3(RowTemplate3Template):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    recipe_id = self.item['RecipeID']
+    self.parent.raise_event('x-show-ingredients-alert', recipe_id=recipe_id)

@@ -2,6 +2,33 @@ container:
   type: ColumnPanel
   properties: {background: '#e1e1e1'}
 components:
+- name: column_panel_8
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'JYZONS,QNIGEH'}
+  components:
+  - name: column_panel_9
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IUYWQH,IRVPAI'}
+  - name: column_panel_10
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IUYWQH,GDLKEG'}
+  - name: link_1
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'IUYWQH,SSBJAL'}
+    components:
+    - name: image_4
+      properties: {source: _/theme/home.png}
+      type: Image
+      layout_properties: {grid_position: 'RYGMGS,IDHDKD'}
+    event_bindings: {click: link_1_click}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'OOTTGH,XKNDFB'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel

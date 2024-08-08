@@ -57,7 +57,7 @@ components:
   - name: repeating_panel_1
     properties: {item_template: Main_page.Veggie_category.RowTemplate1, visible: true}
     type: RepeatingPanel
-    event_bindings: {show: repeating_panel_1_show}
+    event_bindings: {}
     layout_properties: {}
   layout_properties: {grid_position: 'NZJZZV,SYMITE'}
 is_package: true

@@ -44,7 +44,7 @@ components:
     - {id: VJQQOR, title: Description, data_key: Description}
     - {id: OJLQEN, title: Category, data_key: Category}
     - {id: SUMYCI, data_key: PreparationTime, title: Preparation Time (minutes)}
-    - {id: PHDUSK, data_key: Link, title: Link to recipe}
+    - {id: PHDUSK, data_key: Link, title: Ingredients, width: 146.6666259765625, expand: false}
     background: '#c8b192'
     role: tonal-data-grid
   type: DataGrid

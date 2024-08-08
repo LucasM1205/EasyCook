@@ -68,6 +68,9 @@ db_schema:
     - name: Category
       admin_ui: {width: 200}
       type: string
+    - name: Unit
+      admin_ui: {width: 200, order: 3}
+      type: string
   recipes:
     title: Recipes
     client: search
@@ -93,14 +96,14 @@ db_schema:
     client: search
     server: full
     columns:
-    - name: Cuantity
-      admin_ui: {width: 200}
+    - name: Quantity
+      admin_ui: {order: 2, width: 200}
       type: number
     - name: RecipeID
       admin_ui: {order: -1, width: 200}
       type: link_single
       target: recipes
-    - name: IngridientID
+    - name: IngredientID
       admin_ui: {order: 0.5, width: 200}
       type: link_single
       target: ingredients

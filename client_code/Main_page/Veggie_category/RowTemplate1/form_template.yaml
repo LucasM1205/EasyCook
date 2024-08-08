@@ -8,3 +8,4 @@ components:
   properties: {text: Press here for further information, border: '', foreground: '', background: '#ffff'}
   type: Button
   layout_properties: {column: ANVTDW}
+  event_bindings: {click: button_1_click}

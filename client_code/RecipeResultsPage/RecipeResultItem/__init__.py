@@ -13,7 +13,6 @@ class RecipeResultItem(RecipeResultItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
     # Set the data bindings
     self.label_name.text = self.item['Name']
     # Any code you write here will run before the form opens.

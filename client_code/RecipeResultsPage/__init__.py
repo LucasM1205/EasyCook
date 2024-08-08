@@ -13,10 +13,8 @@ class RecipeResultsPage(RecipeResultsPageTemplate):
   def __init__(self, selected_ingredients, **properties):
     # Pass **properties to self.init_components() before doing anything else
     self.init_components(**properties)
-
     # Load recipes based on selected ingredients
     recipes = anvil.server.call('get_recipes_by_ingredients', selected_ingredients)
-    
     # Display the recipes
     self.repeating_panel_1.items = recipes
 

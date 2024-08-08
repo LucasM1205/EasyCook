@@ -9,6 +9,6 @@ components:
   layout_properties: {grid_position: 'BBRBUD,GVLLQY'}
   components:
   - name: label_name
-    properties: {}
+    properties: {background: '#e1e1e1', foreground: ''}
     type: Label
     layout_properties: {grid_position: 'ZBKAKL,CAPNMI'}

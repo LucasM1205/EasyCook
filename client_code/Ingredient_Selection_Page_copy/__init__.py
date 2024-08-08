@@ -17,7 +17,6 @@ class Ingredient_Selection_Page_copy(Ingredient_Selection_Page_copyTemplate):
     ingredients = anvil.server.call('get_all_ingredients')
     # Set the repeating panel items
     self.repeating_panel_1.items = [{'ingredient': ingredient, 'selected': True} for ingredient in ingredients]
-
     # Any code you write here will run before the form opens.
 
   def link_1_click(self, **event_args):
@@ -27,6 +26,6 @@ class Ingredient_Selection_Page_copy(Ingredient_Selection_Page_copyTemplate):
   def continue_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get selected ingredients
-    selected_ingredients = [item['ingredient'] for item in self.repeating_panel_1.items if item['selected']]
+    selected_ingredients = [item['ingredient'] for item in self.repeating_panel_1.items if item['selected']]    
     # Pass selected ingredients to the next page
     open_form('RecipeResultsPage', selected_ingredients=selected_ingredients)

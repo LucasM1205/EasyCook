@@ -13,5 +13,11 @@ class IngredientItem(IngredientItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    # Set the data bindings
+    self.check_box_1.checked = self.item['selected']
+    self.label_1.text = self.item['ingredient']
 
+  def check_box_1_change(self, **event_args):
+    """This method is called when the check box is changed"""
+    self.item['selected'] = self.check_box_1.checked
     # Any code you write here will run before the form opens.

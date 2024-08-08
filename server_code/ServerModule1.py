@@ -50,3 +50,13 @@ def get_ingredients_for_recipe(recipe_id):
         })
     
     return ingredients
+
+@anvil.server.callable
+def get_all_ingredients():
+    return [row['Name'] for row in app_tables.ingredients.search()]
+
+@anvil.server.callable
+def get_recipes_by_ingredients(selected_ingredients):
+    return app_tables.recipes.search(q.all_of(
+        *[q.any_of(q.full_text_match('ingredients', ingredient)) for ingredient in selected_ingredients]
+    ))

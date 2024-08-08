@@ -10,15 +10,15 @@ from anvil.tables import app_tables
 
 
 class RecipeResultsPage(RecipeResultsPageTemplate):
-  def __init__(self, **properties):
+  def __init__(self, selected_ingredients, **properties):
     # Pass **properties to self.init_components() before doing anything else
-        self.init_components(**properties)
+    self.init_components(**properties)
 
-        # Load recipes based on selected ingredients
-        recipes = anvil.server.call('get_recipes_by_ingredients', selected_ingredients)
-        
-        # Display the recipes
-        self.repeating_panel_1.items = recipes
+    # Load recipes based on selected ingredients
+    recipes = anvil.server.call('get_recipes_by_ingredients', selected_ingredients)
+    
+    # Display the recipes
+    self.repeating_panel_1.items = recipes
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""

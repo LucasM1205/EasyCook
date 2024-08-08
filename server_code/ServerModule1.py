@@ -57,6 +57,9 @@ def get_all_ingredients():
 
 @anvil.server.callable
 def get_recipes_by_ingredients(selected_ingredients):
-    return app_tables.recipes.search(q.all_of(
-        *[q.any_of(q.full_text_match('ingredients', ingredient)) for ingredient in selected_ingredients]
-    ))
+    matching_recipes = []
+    for recipe in app_tables.recipes.search():
+        ingredients = [ri['IngredientID']['Name'] for ri in app_tables.recipeingredients.search(RecipeID=recipe)]
+        if all(ingredient in ingredients for ingredient in selected_ingredients):
+            matching_recipes.append(recipe)
+    return matching_recipes

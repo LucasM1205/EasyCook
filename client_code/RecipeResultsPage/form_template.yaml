@@ -30,4 +30,8 @@ components:
   properties: {text: Recipes, bold: true, font_size: 32}
   type: Label
   layout_properties: {grid_position: 'TPWTGI,GGDRYN'}
+- name: repeating_panel_1
+  properties: {item_template: RecipeResultsPage.RecipeResultItem}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'NFBTWS,VKAVSF'}
 is_package: true

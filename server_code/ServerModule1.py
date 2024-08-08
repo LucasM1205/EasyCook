@@ -60,6 +60,14 @@ def get_recipes_by_ingredients(selected_ingredients):
     matching_recipes = []
     for recipe in app_tables.recipes.search():
         ingredients = [ri['IngredientID']['Name'] for ri in app_tables.recipeingredients.search(RecipeID=recipe)]
-        if all(ingredient in ingredients for ingredient in selected_ingredients):
-            matching_recipes.append(recipe)
-    return matching_recipes
+        print(f"Recipe: {recipe['Name']}, Ingredients: {ingredients}")  # Debugging-Ausgabe
+        match_count = sum(ingredient in ingredients for ingredient in selected_ingredients)
+        if match_count > 0:
+            matching_recipes.append({'recipe': recipe, 'match_count': match_count})
+    
+    # Sort by the number of matching ingredients, descending
+    matching_recipes.sort(key=lambda x: x['match_count'], reverse=True)
+    
+    print(f"Matching Recipes: {matching_recipes}")  # Debugging-Ausgabe
+    return [mr['recipe'] for mr in matching_recipes]
+

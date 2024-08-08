@@ -30,6 +30,10 @@ components:
   properties: {text: Recipes, bold: true, font_size: 32}
   type: Label
   layout_properties: {grid_position: 'TPWTGI,GGDRYN'}
+- name: label_2
+  properties: {text: The recipes are listed according to their highest match, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'YFRFGZ,FMDYZB'}
 - name: repeating_panel_1
   properties: {item_template: RecipeResultsPage.RecipeResultItem}
   type: RepeatingPanel

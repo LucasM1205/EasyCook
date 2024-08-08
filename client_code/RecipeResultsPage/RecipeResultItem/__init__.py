@@ -16,3 +16,6 @@ class RecipeResultItem(RecipeResultItemTemplate):
     # Set the data bindings
     self.label_name.text = self.item['Name']
     # Any code you write here will run before the form opens.
+
+    # Debugging-Ausgabe
+    print("Item in RecipeResultItem:", self.item)

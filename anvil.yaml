@@ -91,6 +91,9 @@ db_schema:
     - name: RecipeID
       admin_ui: {width: 200, order: 0}
       type: number
+    - name: RecipePicture
+      admin_ui: {width: 200, order: 5}
+      type: media
   recipeingredients:
     title: RecipeIngredients
     client: search

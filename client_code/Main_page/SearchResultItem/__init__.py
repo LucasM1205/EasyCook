@@ -16,3 +16,7 @@ class SearchResultItem(SearchResultItemTemplate):
     # Set the data bindings
     self.result_label.text = self.item['Name']
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass

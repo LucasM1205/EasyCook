@@ -8,18 +8,24 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'LJJGRG,RACPLR'}
   components:
-  - name: image_1
-    properties: {role: rounded-image, display_mode: zoom_to_fill}
-    type: Image
-    layout_properties: {grid_position: 'BIJEQB,BKANOC'}
+  - name: link_1
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'CGCUDG,ZRQGBO'}
+    components:
+    - name: image_1
+      properties: {role: rounded-image, display_mode: zoom_to_fill}
+      type: Image
+      layout_properties: {grid_position: 'ZQRXBH,URSPVZ'}
+    - name: label_name
+      properties: {background: '#e1e1e1', foreground: '#000', font_size: 18, bold: true, align: left}
+      type: Label
+      layout_properties: {grid_position: 'MQFUCL,NWVXQH'}
+    event_bindings: {click: link_1_click}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'BIJEQB,ATXFQV'}
-  - name: label_name
-    properties: {background: '#e1e1e1', foreground: '#000', font_size: 18, bold: true, align: left}
-    type: Label
-    layout_properties: {grid_position: 'XDVICJ,BOLRTA'}
+    layout_properties: {grid_position: 'CGCUDG,YMTZBM'}
 - name: spacer_1
   properties: {height: '40'}
   type: Spacer

@@ -2,6 +2,10 @@ container:
   type: ColumnPanel
   properties: {background: '#e1e1e1'}
 components:
+- name: spacer_6
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'OLFLXG,UCHJDR'}
 - name: column_panel_1
   properties: {background: '#fff', role: tonal-card}
   type: ColumnPanel
@@ -39,6 +43,11 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'IUGLMG,YURERV'}
+  - name: back_button
+    properties: {text: Back, background: '#c8b192', foreground: '#fff', font_size: 16, role: tonal-button}
+    type: Button
+    layout_properties: {grid_position: 'HYWSOQ,YIYGFK'}
+    event_bindings: {click: back_button_click}
 - name: spacer_4
   properties: {height: 32}
   type: Spacer
@@ -47,4 +56,8 @@ components:
   properties: {display_mode: zoom_to_fill, role: rounded-image}
   type: Image
   layout_properties: {grid_position: 'VIJCLC,ONFUXJ'}
+- name: spacer_5
+  properties: {height: '96', spacing_below: small}
+  type: Spacer
+  layout_properties: {grid_position: 'DOVRWP,NKJNHZ'}
 is_package: true

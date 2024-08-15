@@ -57,7 +57,7 @@ components:
     layout_properties: {grid_position: 'XTJHHJ,XTSUOI'}
     components:
     - name: label_2
-      properties: {text: Qickly find a recipes, bold: true, background: '', font_size: 32, foreground: '#fff'}
+      properties: {text: Quickly find a recipes, bold: true, background: '', font_size: 32, foreground: '#fff'}
       type: Label
       layout_properties: {grid_position: 'IIYYAO,BKIMZQ'}
     - name: column_panel_6

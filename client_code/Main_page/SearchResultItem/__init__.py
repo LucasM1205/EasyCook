@@ -21,4 +21,4 @@ class SearchResultItem(SearchResultItemTemplate):
     """This method is called when the link is clicked"""
     # Abrufen der Rezeptdetails vom Server
     recipe_details = anvil.server.call('get_recipe_details', self.item['RecipeID'])
-    open_form('RecipeCard', recipe=recipe_details)
+    open_form('RecipeCard', recipe=recipe_details, previous_page="Main_page")

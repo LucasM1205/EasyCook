@@ -77,6 +77,11 @@ def get_recipe_details(recipe_id):
     recipe = app_tables.recipes.get(RecipeID=recipe_id)
     if recipe is None:
         raise ValueError(f"Recipe with ID {recipe_id} not found.")
+    
+    # Debugging: Direkt auf das Feld zugreifen
+    print("Recipe Name:", recipe['Name'])
+    print("PreparationSteps Field:", recipe['PreparationSteps'])
+    
     # Zutaten und Mengen über die Assoziationstabelle abrufen
     ingredients = []
     for ri in app_tables.recipeingredients.search(RecipeID=recipe):
@@ -84,13 +89,13 @@ def get_recipe_details(recipe_id):
         ingredients.append({
             'name': ingredient['Name'],
             'quantity': ri['Quantity'],
-            'unit': ingredient['Unit']  # Assuming there's a Unit field in Ingredients
+            'unit': ingredient['Unit']
         })
     
     # Rezeptdetails zusammenstellen
     return {
         'Name': recipe['Name'],
         'RecipePicture': recipe['RecipePicture'],
-        'Ingredients': ingredients,  # Eine Liste von Zutaten erstellen
-        #'PreparationSteps': recipe.get('PreparationSteps', 'Keine Zubereitungsschritte vorhanden')
+        'Ingredients': ingredients,
+        'PreparationSteps': recipe['PreparationSteps']  # Direktes Feld, ohne get()
     }

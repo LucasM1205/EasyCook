@@ -94,6 +94,9 @@ db_schema:
     - name: RecipePicture
       admin_ui: {width: 200, order: 5}
       type: media
+    - name: PreparationSteps
+      admin_ui: {order: 6, width: 200}
+      type: string
   recipeingredients:
     title: RecipeIngredients
     client: search

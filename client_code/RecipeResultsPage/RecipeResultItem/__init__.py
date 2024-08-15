@@ -13,14 +13,16 @@ class RecipeResultItem(RecipeResultItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # Set the data bindings
     self.image_1.source = self.item['RecipePicture']
     self.label_name.text = self.item['Name']
     # Any code you write here will run before the form opens.
-
     # Debugging-Ausgabe
     print("Item in RecipeResultItem:", self.item)
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('RecipeCard', recipe=self.item)
+    recipe_id = self.item['RecipeID']
+    recipe_details = anvil.server.call('get_recipe_details', recipe_id)
+    # Hole die aktuelle Instanz der geöffneten Form (RecipeResultsPage)
+    parent_form = get_open_form()
+    open_form('RecipeCard', recipe=recipe_details, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)

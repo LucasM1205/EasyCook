@@ -14,6 +14,7 @@ class RecipeResultItem(RecipeResultItemTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Set the data bindings
+    self.image_1.source = self.item['RecipePicture']
     self.label_name.text = self.item['Name']
     # Any code you write here will run before the form opens.
 

@@ -3,12 +3,24 @@ container:
   type: ColumnPanel
   properties: {background: '#e1e1e1'}
 components:
-- name: column_panel_1
+- name: column_panel_2
   properties: {}
   type: ColumnPanel
-  layout_properties: {grid_position: 'BBRBUD,GVLLQY'}
+  layout_properties: {grid_position: 'LJJGRG,RACPLR'}
   components:
+  - name: image_1
+    properties: {role: rounded-image, display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {grid_position: 'BIJEQB,BKANOC'}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BIJEQB,ATXFQV'}
   - name: label_name
-    properties: {background: '#e1e1e1', foreground: '#000', font_size: 18}
+    properties: {background: '#e1e1e1', foreground: '#000', font_size: 18, bold: true, align: left}
     type: Label
-    layout_properties: {grid_position: 'ZBKAKL,CAPNMI'}
+    layout_properties: {grid_position: 'XDVICJ,BOLRTA'}
+- name: spacer_1
+  properties: {height: '40'}
+  type: Spacer
+  layout_properties: {grid_position: 'BBRBUD,FMOWWR'}

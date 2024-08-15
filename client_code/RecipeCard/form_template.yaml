@@ -1,0 +1,50 @@
+container:
+  type: ColumnPanel
+  properties: {background: '#e1e1e1'}
+components:
+- name: column_panel_1
+  properties: {background: '#fff', role: tonal-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NZSWDV,KTJZYP'}
+  components:
+  - name: label_name
+    properties: {text: RecipeName, font: '', bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'MIMSXQ,EVFGWX'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'LBHNRD,BABBAV'}
+  - name: label_1
+    properties: {text: Ingredients, font: '', bold: true, font_size: 24}
+    type: Label
+    layout_properties: {grid_position: 'BTVVXA,RNHMCP'}
+  - name: label_ingredients
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'BGCLAZ,FMCTAR'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'AYFOTV,WXKHAU'}
+  - name: label_2
+    properties: {text: Instructions, bold: true, font_size: 24}
+    type: Label
+    layout_properties: {grid_position: 'FRZQIF,PLFUTQ'}
+  - name: label_preparation
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'PBCTSF,GGCIVZ'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'IUGLMG,YURERV'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'MFSOZP,ZTERZI'}
+- name: image_1
+  properties: {display_mode: zoom_to_fill, role: rounded-image}
+  type: Image
+  layout_properties: {grid_position: 'VIJCLC,ONFUXJ'}
+is_package: true

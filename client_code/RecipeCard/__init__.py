@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 
 
 class RecipeCard(RecipeCardTemplate):
-  def __init__(self, **properties):
+  def __init__(self, recipe, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Setze die Daten für das ausgewählte Rezept

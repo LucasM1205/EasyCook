@@ -71,3 +71,26 @@ def get_recipes_by_ingredients(selected_ingredients):
     print(f"Matching Recipes: {matching_recipes}")  # Debugging-Ausgabe
     return [mr['recipe'] for mr in matching_recipes]
 
+@anvil.server.callable
+def get_recipe_details(recipe_id):
+    # Rezept abrufen
+    recipe = app_tables.recipes.get(RecipeID=recipe_id)
+    if recipe is None:
+        raise ValueError(f"Recipe with ID {recipe_id} not found.")
+    # Zutaten und Mengen über die Assoziationstabelle abrufen
+    ingredients = []
+    for ri in app_tables.recipeingredients.search(RecipeID=recipe):
+        ingredient = ri['IngredientID']
+        ingredients.append({
+            'name': ingredient['Name'],
+            'quantity': ri['Quantity'],
+            'unit': ingredient['Unit']  # Assuming there's a Unit field in Ingredients
+        })
+    
+    # Rezeptdetails zusammenstellen
+    return {
+        'Name': recipe['Name'],
+        'RecipePicture': recipe['RecipePicture'],
+        'Ingredients': ingredients,  # Eine Liste von Zutaten erstellen
+        #'PreparationSteps': recipe.get('PreparationSteps', 'Keine Zubereitungsschritte vorhanden')
+    }

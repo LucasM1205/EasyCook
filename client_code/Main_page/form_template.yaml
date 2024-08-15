@@ -37,7 +37,7 @@ components:
       properties: {background: '#c8b192', foreground: '#ffff', role: rounded-textbox, align: left}
       type: TextBox
       layout_properties: {grid_position: 'OLIRDA,IMNCIK'}
-      event_bindings: {change: search_box_change}
+      event_bindings: {change: search_box_change, pressed_enter: search_box_pressed_enter}
     - name: search_results_panel
       properties: {item_template: Main_page.SearchResultItem}
       type: RepeatingPanel

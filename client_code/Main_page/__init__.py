@@ -41,3 +41,9 @@ class Main_page(Main_pageTemplate):
   def elevated_button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Main_page.Sweet_category')
+
+  def search_box_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    selected_recipe = self.search_results_panel.selected_item
+    if selected_recipe:
+      open_form('RecipeCard', recipe=selected_recipe)

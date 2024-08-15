@@ -19,6 +19,6 @@ class SearchResultItem(SearchResultItemTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    elected_recipe = self.search_results_panel.selected_item
-    if selected_recipe:
-        open_form('RecipeCard', recipe=selected_recipe)
+    # Abrufen der Rezeptdetails vom Server
+    recipe_details = anvil.server.call('get_recipe_details', self.item['RecipeID'])
+    open_form('RecipeCard', recipe=recipe_details)

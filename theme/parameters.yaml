@@ -77,7 +77,7 @@ roles:
   components: [RadioButton]
   display_in_toolbox: true
 - name: favorite-checkbox
-  components: [Checkbox]
+  components: [Checkbox, CheckBox]
   display_in_toolbox: true
 color_scheme:
   preset_groups:

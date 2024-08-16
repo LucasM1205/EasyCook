@@ -22,7 +22,8 @@ class RecipeResultItem(RecipeResultItemTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     recipe_id = self.item['RecipeID']
-    recipe_details = anvil.server.call('get_recipe_details', recipe_id)
+    recipe_data = anvil.server.call('get_recipe_details', recipe_id)
     # Hole die aktuelle Instanz der geöffneten Form (RecipeResultsPage)
     parent_form = get_open_form()
-    open_form('RecipeCard', recipe=recipe_details, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)
+    #open_form('RecipeCard', recipe=recipe_details, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)
+    open_form('RecipeCard', recipe_data=recipe_data, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)

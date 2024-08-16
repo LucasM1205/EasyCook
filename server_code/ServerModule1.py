@@ -92,20 +92,29 @@ def get_recipe_details(recipe_id):
             'unit': ingredient['Unit']
         })
     
-    # Rezeptdetails zusammenstellen
+    # Rezeptdetails zusammenstellen und das vollständige Row-Objekt zurückgeben
     return {
-        'Name': recipe['Name'],
-        'RecipePicture': recipe['RecipePicture'],
-        'Ingredients': ingredients,
-        'PreparationSteps': recipe['PreparationSteps']  # Direktes Feld, ohne get()
+        'recipe': recipe,
+        'details': {
+            'Name': recipe['Name'],
+            'RecipePicture': recipe['RecipePicture'],
+            'Ingredients': ingredients,
+            'PreparationSteps': recipe['PreparationSteps']  # Direktes Feld, ohne get()
+        }
     }
+  
+@anvil.server.callable
+def is_favorite(recipe):
+    user = anvil.users.get_user()
+    # Direktes Verwenden des Row-Objekts
+    return app_tables.favorites.get(user=user, recipe=recipe) is not None
 
 @anvil.server.callable
 def add_to_favorites(recipe):
     user = anvil.users.get_user()
     if not app_tables.favorites.get(user=user, recipe=recipe):
         app_tables.favorites.add_row(user=user, recipe=recipe)
-        # Optional: Update the FavoritesCount in the Recipes table
+        # Optional: Aktualisieren der Favoritenanzahl
         recipe['FavoritesCount'] = recipe.get('FavoritesCount', 0) + 1
 
 @anvil.server.callable
@@ -114,5 +123,7 @@ def remove_from_favorites(recipe):
     favorite_row = app_tables.favorites.get(user=user, recipe=recipe)
     if favorite_row:
         favorite_row.delete()
-        # Optional: Update the FavoritesCount in the Recipes table
+        # Optional: Aktualisieren der Favoritenanzahl
         recipe['FavoritesCount'] = max(0, recipe.get('FavoritesCount', 0) - 1)
+
+

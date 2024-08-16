@@ -114,7 +114,7 @@ def add_to_favorites(recipe):
     user = anvil.users.get_user()
     if not app_tables.favorites.get(user=user, recipe=recipe):
         app_tables.favorites.add_row(user=user, recipe=recipe)
-        # Optional: Aktualisieren der Favoritenanzahl
+        #Aktualisieren der Favoritenanzahl
         recipe['FavoritesCount'] = recipe.get('FavoritesCount', 0) + 1
 
 @anvil.server.callable
@@ -123,7 +123,7 @@ def remove_from_favorites(recipe):
     favorite_row = app_tables.favorites.get(user=user, recipe=recipe)
     if favorite_row:
         favorite_row.delete()
-        # Optional: Aktualisieren der Favoritenanzahl
+        #Aktualisieren der Favoritenanzahl
         recipe['FavoritesCount'] = max(0, recipe.get('FavoritesCount', 0) - 1)
 
 

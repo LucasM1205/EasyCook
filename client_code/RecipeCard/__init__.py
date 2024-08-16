@@ -49,6 +49,7 @@ class RecipeCard(RecipeCardTemplate):
     if self.radio_button_favorite.selected:
       # Füge das Rezept zu den Favoriten hinzu
       anvil.server.call('add_to_favorites', self.recipe)
+
     else:
       # Entferne das Rezept aus den Favoriten
       anvil.server.call('remove_from_favorites', self.recipe)

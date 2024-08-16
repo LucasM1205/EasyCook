@@ -42,17 +42,17 @@ class RecipeCard(RecipeCardTemplate):
   def update_favorite_status(self):
     # Überprüfen, ob das Rezept bereits als Favorit markiert ist
     is_favorite = anvil.server.call('is_favorite', self.recipe)
-    self.radio_button_favorite.selected = is_favorite
+    #self.radio_button_favorite.selected = is_favorite
+    self.check_box_favorite.checked = is_favorite
 
-  def radio_button_favorite_change(self, **event_args):
-    """Wird aufgerufen, wenn der RadioButton geändert wird"""
-    if self.radio_button_favorite.selected:
-      # Füge das Rezept zu den Favoriten hinzu
+  def check_box_favorite_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    if self.check_box_favorite.checked:
+      print("Adding to favorites")
       anvil.server.call('add_to_favorites', self.recipe)
-
     else:
-      # Entferne das Rezept aus den Favoriten
+      print("Removing from favorites")
       anvil.server.call('remove_from_favorites', self.recipe)
 
-    # Aktualisiere den Favoriten-Status
+    # Aktualisiere den Favoriten-Status im UI
     self.update_favorite_status()

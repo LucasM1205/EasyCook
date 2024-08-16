@@ -15,16 +15,16 @@ components:
     properties: {text: RecipeName, font: '', bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'MIMSXQ,EVFGWX'}
-  - name: column_panel_2
+  - name: col
     properties: {}
     type: ColumnPanel
     layout_properties: {grid_position: 'MIMSXQ,FCCNWV'}
     components:
-    - name: radio_button_favorite
-      properties: {text: Add to favourites, role: null}
-      type: RadioButton
-      layout_properties: {grid_position: 'OURYIF,AEBSZH'}
-      event_bindings: {change: radio_button_favorite_change}
+    - name: check_box_favorite
+      properties: {text: Add to favorites}
+      type: CheckBox
+      layout_properties: {grid_position: 'YLGNKM,RRWVTD'}
+      event_bindings: {change: check_box_favorite_change}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer

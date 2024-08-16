@@ -15,6 +15,7 @@ class RecipeCard(RecipeCardTemplate):
     self.init_components(**properties)
 
     # Speichern des Parameters previous_page
+    self.recipe = recipe
     self.previous_page = previous_page
     self.selected_ingredients = selected_ingredients
     
@@ -34,4 +35,20 @@ class RecipeCard(RecipeCardTemplate):
         open_form('Main_page')
     elif self.previous_page == "RecipeResultsPage":
         open_form('RecipeResultsPage', selected_ingredients=self.selected_ingredients)
+
+  def update_favorite_status(self):
+    # Überprüfen, ob das Rezept bereits als Favorit markiert ist
+    is_favorite = anvil.server.call('is_favorite', self.recipe)
+    self.radio_button_favorite.selected = is_favorite
+
+  def radio_button_favorite_change(self, **event_args):
+    """Wird aufgerufen, wenn der RadioButton geändert wird"""
+    if self.radio_button_favorite.selected:
+      # Füge das Rezept zu den Favoriten hinzu
+      anvil.server.call('add_to_favorites', self.recipe)
+    else:
+      # Entferne das Rezept aus den Favoriten
+      anvil.server.call('remove_from_favorites', self.recipe)
+      # Aktualisiere den Favoriten-Status
+      self.update_favorite_status()
 

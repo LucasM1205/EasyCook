@@ -20,10 +20,11 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'MIMSXQ,FCCNWV'}
     components:
-    - name: radio_button_favorite_change
-      properties: {text: Favourite recipe, role: null}
+    - name: radio_button_favorite
+      properties: {text: Add to favourites, role: null}
       type: RadioButton
       layout_properties: {grid_position: 'OURYIF,AEBSZH'}
+      event_bindings: {clicked: radio_button_favorite_change}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer

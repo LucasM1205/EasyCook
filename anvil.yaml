@@ -97,6 +97,9 @@ db_schema:
     - name: PreparationSteps
       admin_ui: {order: 6, width: 200}
       type: string
+    - name: FavoritesCount
+      admin_ui: {width: 200, order: 7}
+      type: number
   recipeingredients:
     title: RecipeIngredients
     client: search
@@ -113,3 +116,16 @@ db_schema:
       admin_ui: {order: 0.5, width: 200}
       type: link_single
       target: ingredients
+  favorites:
+    client: none
+    server: full
+    columns:
+    - name: user
+      admin_ui: {width: 200, order: 0}
+      type: link_single
+      target: users
+    - name: recipe
+      admin_ui: {width: 200, order: 1}
+      type: link_single
+      target: recipes
+    title: Favorites

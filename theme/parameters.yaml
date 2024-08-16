@@ -73,6 +73,9 @@ roles:
 - name: rounded-textbox
   components: [Textbox, TextBox]
   display_in_toolbox: true
+- name: star-radio-button
+  components: [Radio Button]
+  display_in_toolbox: true
 color_scheme:
   preset_groups:
   - name: Colour Scheme

@@ -999,8 +999,33 @@ input[disabled] ~ span {
   font-size: 16px;
 }
 
+.anvil-role-star-radio-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    appearance: none; /* Entfernt das Standard-Radio-Button-Styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
 
+.anvil-role-star-radio-button::before {
+    content: &"; /* Leerer Stern */
+    position: absolute;
+    font-size: 2rem;
+    color: yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.anvil-role-star-radio-button:checked::before {
+    content: &"; /* Ausgefüllter Stern bei Auswahl */
+    color: yellow;
+}
 
 
 

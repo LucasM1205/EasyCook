@@ -73,8 +73,11 @@ roles:
 - name: rounded-textbox
   components: [Textbox, TextBox]
   display_in_toolbox: true
-- name: star-radio-button
-  components: [Radio Button]
+- name: favorite-radio-button
+  components: [RadioButton]
+  display_in_toolbox: true
+- name: favorite-checkbox
+  components: [Checkbox]
   display_in_toolbox: true
 color_scheme:
   preset_groups:

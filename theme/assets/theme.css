@@ -999,33 +999,66 @@ input[disabled] ~ span {
   font-size: 16px;
 }
 
-.anvil-role-star-radio-button {
+
+/* Favorite-Checkbox Role */
+.anvil-role-favorite-checkbox {
     position: relative;
-    width: 2rem;
-    height: 2rem;
-    appearance: none; /* Entfernt das Standard-Radio-Button-Styling */
+    width: 24px;
+    height: 24px;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
     background-color: transparent;
-    border: 2px solid yellow;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #FF6347;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
-.anvil-role-star-radio-button::before {
-    content: &"; /* Leerer Stern */
+.anvil-role-favorite-checkbox:before {
+    content: "\2661"; /* Unicode für leeres Herz */
+    font-size: 20px;
+    color: #FF6347;
     position: absolute;
-    font-size: 2rem;
-    color: yellow;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.anvil-role-star-radio-button:checked::before {
-    content: &"; /* Ausgefüllter Stern bei Auswahl */
-    color: yellow;
+.anvil-role-favorite-checkbox:checked:before {
+    content: "\2665"; /* Unicode für ausgefülltes Herz */
+    color: #FF6347;
 }
+
+
+
+
+
+/* Favorite-Radio-Button Role */
+.anvil-role-favorite-radio-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid #FF6347; /* Tomatenrote Umrandung */
+    border-radius: 50%;
+    background-color: transparent; /* Leer bei Deaktivierung */
+    transition: background-color 0.3s ease;
+}
+
+.anvil-role-favorite-radio-button:checked {
+    background-color: #FF6347; /* Tomatenrot bei Aktivierung */
+}
+
+
+
+
+
+
 
 
 

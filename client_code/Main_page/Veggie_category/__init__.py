@@ -14,6 +14,7 @@ class Veggie_category(Veggie_categoryTemplate):
         self.init_components(**properties)  
         self.repeating_panel_1.items = app_tables.recipes.search(Category="Veggie")
         self.repeating_panel_1.set_event_handler('x-show-ingredients-alert', self.show_ingredients_alert)
+        self.repeating_panel_2.items = app_tables.recipes.search(Category="Veggie")
     
     def show_ingredients_alert(self, recipe_id, **event_args):
         ingredients = anvil.server.call('get_ingredients_for_recipe', recipe_id)     

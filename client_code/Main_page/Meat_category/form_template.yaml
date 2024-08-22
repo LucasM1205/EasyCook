@@ -33,6 +33,64 @@ components:
     properties: {text: Meat recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null}
     type: Label
     layout_properties: {grid_position: 'GSRCDR,FVQOXO'}
+- name: spacer_2
+  properties: {height: '64'}
+  type: Spacer
+  layout_properties: {grid_position: 'QPBANS,RLLBIS'}
+- name: column_panel_4
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'FFJJDN,XJWHFL'}
+  components:
+  - name: column_panel_5
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PWMTKJ,JFLKNB'}
+    components:
+    - name: label_2
+      properties: {text: Name, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'BNHPFK,RFGULV'}
+  - name: column_panel_8
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PWMTKJ,YNTTAK'}
+    components:
+    - name: label_5
+      properties: {text: Description, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'YZJLFW,WDFWFA'}
+  - name: column_panel_7
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PWMTKJ,JNLWTK'}
+    components:
+    - name: label_3
+      properties: {font: '', bold: true, text: Category, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'OAMKPC,KXPBGO'}
+  - name: column_panel_9
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PWMTKJ,DHTBLI'}
+    components:
+    - name: label_6
+      properties: {text: Preparation Time (Minutes), bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'NUXUGC,TRIVVP'}
+  - name: column_panel_6
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PWMTKJ,XLAZHZ'}
+    components:
+    - name: label_4
+      properties: {text: Recipe, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'FBRPDW,EDMYIL'}
+  - name: repeating_panel_2
+    properties: {item_template: Main_page.Meat_category.ItemTemplate4}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'ZRPMZW,UKZRSH'}
 - name: spacer_1
   properties: {height: '64'}
   type: Spacer
@@ -47,6 +105,7 @@ components:
     - {id: FDLTXJ, data_key: Link, title: Ingredients}
     background: '#c8b192'
     role: tonal-data-grid
+    visible: false
   type: DataGrid
   components:
   - name: repeating_panel_1

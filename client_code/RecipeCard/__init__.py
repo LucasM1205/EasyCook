@@ -38,6 +38,12 @@ class RecipeCard(RecipeCardTemplate):
         open_form('Main_page')
     elif self.previous_page == "RecipeResultsPage":
         open_form('RecipeResultsPage', selected_ingredients=self.selected_ingredients)
+    elif self.previous_page == "Meat_category":
+        open_form('Main_page.Meat_category')
+    elif self.previous_page == "Sweet_category":
+        open_form('Main_page.Sweet_category')
+    elif self.previous_page == "Meat_category":
+        open_form('Main_page.Veggie_category')
 
   def update_favorite_status(self):
     # Überprüfen, ob das Rezept bereits als Favorit markiert ist

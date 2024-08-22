@@ -15,6 +15,7 @@ class Sweet_category(Sweet_categoryTemplate):
     self.init_components(**properties)
     self.repeating_panel_1.items = app_tables.recipes.search(Category="Dessert")
     self.repeating_panel_1.set_event_handler('x-show-ingredients-alert', self.show_ingredients_alert)
+    self.repeating_panel_2.items = app_tables.recipes.search(Category="Dessert")
 
     # Any code you write here will run before the form opens.
   def show_ingredients_alert(self, recipe_id, **event_args):

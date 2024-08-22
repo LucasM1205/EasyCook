@@ -37,6 +37,19 @@ components:
     properties: {height: '64'}
     type: Spacer
     layout_properties: {grid_position: 'RGRIXX,ODCRRB'}
+  - name: column_panel_4
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QMQEQC,RDMRBQ'}
+    components:
+    - name: column_panel_5
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'GQGGRW,BETQFS'}
+  - name: spacer_2
+    properties: {height: '64'}
+    type: Spacer
+    layout_properties: {grid_position: 'NAVWZL,CHBIVO'}
 - name: data_grid_1
   properties:
     columns:

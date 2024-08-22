@@ -102,6 +102,7 @@ components:
     layout_properties: {grid_position: 'NAVWZL,CHBIVO'}
 - name: data_grid_1
   properties:
+    role: tonal-data-grid
     columns:
     - {id: JKSDUP, title: Name, data_key: Name}
     - {id: VJQQOR, title: Description, data_key: Description}
@@ -109,12 +110,12 @@ components:
     - {id: MQDMRR, data_key: PreparationTime, title: Preparation Time (minutes)}
     - {id: ANVTDW, data_key: column_1, title: Ingredients}
     background: '#c8b192'
-    role: tonal-data-grid
-    wrap_on: never
     rows_per_page: 5
+    wrap_on: never
+    foreground: ''
     show_page_controls: true
     auto_header: true
-    foreground: ''
+    visible: false
   type: DataGrid
   components:
   - name: repeating_panel_1

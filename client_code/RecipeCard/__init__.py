@@ -42,7 +42,7 @@ class RecipeCard(RecipeCardTemplate):
         open_form('Main_page.Meat_category')
     elif self.previous_page == "Sweet_category":
         open_form('Main_page.Sweet_category')
-    elif self.previous_page == "Meat_category":
+    elif self.previous_page == "Veggie_category":
         open_form('Main_page.Veggie_category')
 
   def update_favorite_status(self):

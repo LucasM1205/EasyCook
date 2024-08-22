@@ -34,10 +34,13 @@ class RecipeCard(RecipeCardTemplate):
 
   def load_comments(self):
     comments = anvil.server.call('get_comments_for_recipe', self.recipe['RecipeID'])
-     # Bearbeiten der Kommentardaten, um die E-Mail ohne Domain anzuzeigen
+    # Debugging: Kommentare überprüfen
+    print("Geladene Kommentare:", comments)
     for comment in comments:
-        comment['username_display'] = comment['User'].split('@')[0]
+        if 'username_display' not in comment or comment['username_display'] == 'Unbekannt':
+            comment['username_display'] = 'Unknown User'  # Setze einen Standardwert
     self.repeating_panel_comments.items = comments
+
   
   def format_ingredients(self, ingredients):
     return "\n".join([f"{ing['quantity']} {ing['unit']} {ing['name']}" for ing in ingredients])
@@ -58,7 +61,6 @@ class RecipeCard(RecipeCardTemplate):
   def update_favorite_status(self):
     # Überprüfen, ob das Rezept bereits als Favorit markiert ist
     is_favorite = anvil.server.call('is_favorite', self.recipe)
-    #self.radio_button_favorite.selected = is_favorite
     self.check_box_favorite.checked = is_favorite
 
   def check_box_favorite_change(self, **event_args):

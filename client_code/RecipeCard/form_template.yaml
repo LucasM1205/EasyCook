@@ -100,7 +100,7 @@ components:
     properties: {bold: false, background: '#fff', role: outlined}
     type: TextArea
     layout_properties: {grid_position: 'EBNEZT,FRTBKD'}
-    event_bindings: {change: text_area_1_change}
+    event_bindings: {}
   - name: spacer_8
     properties: {height: '16'}
     type: Spacer

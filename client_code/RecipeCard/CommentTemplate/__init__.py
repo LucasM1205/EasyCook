@@ -13,8 +13,7 @@ class CommentTemplate(CommentTemplateTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # Binden Sie die Datenfelder
-    self.label_username_display.text = self.item['User']['email']
+    self.label_username_display.text = self.item['username_display']
     self.label_comment.text = self.item['CommentText']
     self.label_timestamp.text = self.item['Timestamp'].strftime("%d %b %Y, %H:%M")
     # Any code you write here will run before the form opens.

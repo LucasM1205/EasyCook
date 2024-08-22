@@ -15,7 +15,6 @@ class RecipeResultItem(RecipeResultItemTemplate):
     self.init_components(**properties)
     self.image_1.source = self.item['RecipePicture']
     self.label_name.text = self.item['Name']
-    # Any code you write here will run before the form opens.
     # Debugging-Ausgabe
     print("Item in RecipeResultItem:", self.item)
 
@@ -25,5 +24,4 @@ class RecipeResultItem(RecipeResultItemTemplate):
     recipe_data = anvil.server.call('get_recipe_details', recipe_id)
     # Hole die aktuelle Instanz der geöffneten Form (RecipeResultsPage)
     parent_form = get_open_form()
-    #open_form('RecipeCard', recipe=recipe_details, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)
     open_form('RecipeCard', recipe_data=recipe_data, previous_page="RecipeResultsPage", selected_ingredients=parent_form.selected_ingredients)

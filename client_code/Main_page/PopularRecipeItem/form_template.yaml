@@ -1,0 +1,26 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'SDETPD,EUSAKH'}
+  components:
+  - name: image_link
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'LLLEKX,ZZZBBB'}
+    components:
+    - name: image_1
+      properties: {display_mode: zoom_to_fill, role: rounded-image}
+      type: Image
+      layout_properties: {grid_position: 'XSGQZF,QBZHYH'}
+    event_bindings: {click: image_link_click}
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'SDETPD,CGLZLF'}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FSTMKI,POIGDD'}

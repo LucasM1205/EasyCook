@@ -115,7 +115,11 @@ def add_to_favorites(recipe):
     if not app_tables.favorites.get(user=user, recipe=recipe):
         app_tables.favorites.add_row(user=user, recipe=recipe)
         #Aktualisieren der Favoritenanzahl
-        recipe['FavoritesCount'] = recipe.get('FavoritesCount', 0) + 1
+        if 'FavoritesCount' in recipe:
+            recipe['FavoritesCount'] += 1
+        else:
+            recipe['FavoritesCount'] = 1
+        #recipe.save()
 
 @anvil.server.callable
 def remove_from_favorites(recipe):
@@ -124,6 +128,28 @@ def remove_from_favorites(recipe):
     if favorite_row:
         favorite_row.delete()
         #Aktualisieren der Favoritenanzahl
-        recipe['FavoritesCount'] = max(0, recipe.get('FavoritesCount', 0) - 1)
+        if 'FavoritesCount' in recipe:
+          recipe['FavoritesCount'] = max(0, recipe['FavoritesCount'] - 1)
+        else:
+          recipe['FavoritesCount'] = 0
+        #recipe.save()
 
+@anvil.server.callable
+def get_popular_recipes(limit=3):
+    # Abrufen der Rezepte mit den höchsten FavoritesCount
+    popular_recipes = list(app_tables.recipes.search(tables.order_by("FavoritesCount", ascending=False)))
+    # Begrenzen der Anzahl der Ergebnisse
+    return popular_recipes[:limit]
+    # Konvertiere die Ergebnisse in eine Liste von Dictionaries
+    return [{'RecipeID': recipe['RecipeID'], 'RecipePicture': recipe['RecipePicture']} for recipe in popular_recipes]
+
+
+@anvil.server.callable
+def get_favorite_recipes():
+    user = anvil.users.get_user()
+    if user is None:
+        return []
+    favorite_rows = app_tables.favorites.search(user=user)
+    favorite_recipes = [fav['recipe'] for fav in favorite_rows] 
+    return favorite_recipes
 

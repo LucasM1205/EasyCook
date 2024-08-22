@@ -16,7 +16,26 @@ class Main_page(Main_pageTemplate):
     self.search_results_panel.items = []  # Initial leere Suchergebnisse
     while not anvil.users.login_with_form(allow_cancel=True):
       pass
+    # Beliebte Rezepte laden und anzeigen
+    self.load_popular_recipes()
+    #self.load_user_favorites()
+    self.load_favorite_recipes()
 
+  def load_popular_recipes(self):
+    # Abrufen der beliebten Rezepte vom Server
+    popular_recipes = anvil.server.call('get_popular_recipes')
+    self.popular_recipes_panel.items = popular_recipes
+
+  def load_favorite_recipes(self):
+    favorite_recipes = anvil.server.call('get_favorite_recipes')
+    self.favorites_repeating_panel.items = favorite_recipes
+
+  
+  def open_recipe(self, recipe):
+    # Abrufen der Rezeptdetails und Öffnen der RecipeCard
+    recipe_details = anvil.server.call('get_recipe_details', recipe['RecipeID'])
+    open_form('RecipeCard', recipe=recipe_details, previous_page="Main_page")
+  
   def search_box_change(self, **event_args):
     """This method is called when the user types in the search box"""
     keyword = self.search_box.text

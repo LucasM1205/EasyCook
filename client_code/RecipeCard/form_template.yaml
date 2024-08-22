@@ -100,12 +100,13 @@ components:
     properties: {bold: false, background: '#fff', role: outlined}
     type: TextArea
     layout_properties: {grid_position: 'EBNEZT,FRTBKD'}
+    event_bindings: {change: text_area_1_change}
   - name: spacer_8
     properties: {height: '16'}
     type: Spacer
     layout_properties: {grid_position: 'FPMKEE,YQKLZA'}
   - name: button_add_comment
-    properties: {text: Send, background: '#c8b192', role: elevated-button, font_size: null, foreground: '#fff'}
+    properties: {text: Send, background: '#c8b192', role: elevated-button, font_size: 16, foreground: '#fff'}
     type: Button
     layout_properties: {grid_position: 'GXVQWJ,OOXIAW'}
     event_bindings: {click: button_1_click}

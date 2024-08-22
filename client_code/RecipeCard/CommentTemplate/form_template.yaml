@@ -1,10 +1,10 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {background: '#e1e1e1'}
+  properties: {background: '#fff'}
 components:
 - name: column_panel_1
-  properties: {}
+  properties: {role: tonal-card, background: '#e1e1e1'}
   type: ColumnPanel
   layout_properties: {grid_position: 'KCNSIQ,DXRFJU'}
   components:
@@ -13,7 +13,7 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'GMHNZB,KHPNMS'}
     components:
-    - name: label_user
+    - name: label_username_display
       properties: {}
       type: Label
       layout_properties: {grid_position: 'IEFSZG,XJLHNX'}

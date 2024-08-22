@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from datetime import datetime
 
 @anvil.server.callable
 def search_recipes(keyword):
@@ -158,7 +159,7 @@ def add_comment(recipe_id, comment_text):
     user = anvil.users.get_user()
     if user is None:
         raise ValueError("User must be logged in to comment.")
-    
+  
     recipe = app_tables.recipes.get(RecipeID=recipe_id)
     if recipe is None:
         raise ValueError(f"Recipe with ID {recipe_id} not found.")
@@ -167,13 +168,18 @@ def add_comment(recipe_id, comment_text):
         Recipe=recipe,
         User=user,
         CommentText=comment_text,
-        Timestamp=datetime.now()
+        Timestamp=datetime.now(anvil.tz.tzlocal()) + datetime.timedelta(hours=2)
     )
 
 @anvil.server.callable
 def get_comments_for_recipe(recipe_id):
-    recipe = app_tables.recipes.get(RecipeID=recipe_id)
-    if recipe is None:
-        raise ValueError(f"Recipe with ID {recipe_id} not found.")
-    
-    return app_tables.comments.search(tables.order_by('Timestamp', ascending=False), Recipe=recipe)
+    comments = app_tables.comments.search(Recipe=recipe_id)
+    comment_list = []
+    for comment in comments:
+        # Extrahiere den Teil vor dem "@" aus der E-Mail und füge ihn den Kommentaren hinzu
+        comment_list.append({
+            'CommentText': comment['CommentText'],
+            'Timestamp': comment['Timestamp'],
+            'username_display': comment['User'].split('@')[0]
+        })
+    return comment_list

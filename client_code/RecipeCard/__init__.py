@@ -34,17 +34,10 @@ class RecipeCard(RecipeCardTemplate):
 
   def load_comments(self):
     comments = anvil.server.call('get_comments_for_recipe', self.recipe['RecipeID'])
+     # Bearbeiten der Kommentardaten, um die E-Mail ohne Domain anzuzeigen
+    for comment in comments:
+        comment['username_display'] = comment['User'].split('@')[0]
     self.repeating_panel_comments.items = comments
-
-  def button_add_comment_click(self, **event_args):
-    """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""
-    comment_text = self.text_area_1.text
-    if comment_text:
-      anvil.server.call('add_comment', self.recipe['RecipeID'], comment_text)
-      self.text_text_area_1.text = ''  # Clear the text box
-      self.load_comments()  # Reload the comments
-    else:
-      alert("Comment cannot be empty.")
   
   def format_ingredients(self, ingredients):
     return "\n".join([f"{ing['quantity']} {ing['unit']} {ing['name']}" for ing in ingredients])
@@ -85,8 +78,9 @@ class RecipeCard(RecipeCardTemplate):
     comment_text = self.text_area_1.text
     if comment_text:
       anvil.server.call('add_comment', self.recipe['RecipeID'], comment_text)
-      self.text_text_area_1.text = ''  # Clear the text box
+      self.text_area_1.text = ''  # Clear the text box
       self.load_comments()  # Reload the comments
     else:
       alert("Comment cannot be empty.")
+
 

@@ -37,7 +37,7 @@ db_schema:
       admin_ui: {width: 200}
       type: datetime
     - name: password_hash
-      admin_ui: {order: 3, width: 437}
+      admin_ui: {width: 437}
       type: string
     - name: n_password_failures
       admin_ui: {width: 200}
@@ -69,13 +69,16 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: Unit
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {width: 200}
       type: string
   recipes:
     title: Recipes
     client: search
     server: full
     columns:
+    - name: RecipeID
+      admin_ui: {width: 200}
+      type: number
     - name: Name
       admin_ui: {width: 200}
       type: string
@@ -88,44 +91,60 @@ db_schema:
     - name: PreparationTime
       admin_ui: {width: 200}
       type: number
-    - name: RecipeID
-      admin_ui: {width: 200, order: 0}
-      type: number
     - name: RecipePicture
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {width: 200}
       type: media
     - name: PreparationSteps
-      admin_ui: {order: 6, width: 200}
+      admin_ui: {width: 200}
       type: string
     - name: FavoritesCount
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {width: 200}
       type: number
   recipeingredients:
     title: RecipeIngredients
     client: search
     server: full
     columns:
-    - name: Quantity
-      admin_ui: {order: 2, width: 200}
-      type: number
     - name: RecipeID
-      admin_ui: {order: -1, width: 200}
+      admin_ui: {width: 200}
       type: link_single
       target: recipes
     - name: IngredientID
-      admin_ui: {order: 0.5, width: 200}
+      admin_ui: {width: 200}
       type: link_single
       target: ingredients
+    - name: Quantity
+      admin_ui: {width: 200}
+      type: number
   favorites:
+    title: Favorites
     client: full
     server: full
     columns:
     - name: user
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: link_single
       target: users
     - name: recipe
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: link_single
       target: recipes
-    title: Favorites
+  comments:
+    title: Comments
+    client: none
+    server: full
+    columns:
+    - name: Recipe
+      admin_ui: {order: 0, width: 200}
+      type: link_single
+      target: recipes
+    - name: User
+      admin_ui: {width: 200, order: 1}
+      type: link_single
+      target: users
+    - name: CommentText
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Timestamp
+      admin_ui: {width: 200, order: 3}
+      type: datetime

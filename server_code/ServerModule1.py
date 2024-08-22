@@ -153,3 +153,27 @@ def get_favorite_recipes():
     favorite_recipes = [fav['recipe'] for fav in favorite_rows] 
     return favorite_recipes
 
+@anvil.server.callable
+def add_comment(recipe_id, comment_text):
+    user = anvil.users.get_user()
+    if user is None:
+        raise ValueError("User must be logged in to comment.")
+    
+    recipe = app_tables.recipes.get(RecipeID=recipe_id)
+    if recipe is None:
+        raise ValueError(f"Recipe with ID {recipe_id} not found.")
+    
+    app_tables.comments.add_row(
+        Recipe=recipe,
+        User=user,
+        CommentText=comment_text,
+        Timestamp=datetime.now()
+    )
+
+@anvil.server.callable
+def get_comments_for_recipe(recipe_id):
+    recipe = app_tables.recipes.get(RecipeID=recipe_id)
+    if recipe is None:
+        raise ValueError(f"Recipe with ID {recipe_id} not found.")
+    
+    return app_tables.comments.search(tables.order_by('Timestamp', ascending=False), Recipe=recipe)

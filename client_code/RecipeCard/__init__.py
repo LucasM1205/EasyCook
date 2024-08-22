@@ -26,8 +26,25 @@ class RecipeCard(RecipeCardTemplate):
     self.label_ingredients.text = self.format_ingredients(details['Ingredients'])
     self.label_preparation.text = details['PreparationSteps']
 
+    # Lade die Kommentare
+    self.load_comments()
+    
     # Überprüfe, ob das Rezept bereits ein Favorit ist
     self.update_favorite_status()
+
+  def load_comments(self):
+    comments = anvil.server.call('get_comments_for_recipe', self.recipe['RecipeID'])
+    self.repeating_panel_comments.items = comments
+
+  def button_add_comment_click(self, **event_args):
+    """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""
+    comment_text = self.text_area_1.text
+    if comment_text:
+      anvil.server.call('add_comment', self.recipe['RecipeID'], comment_text)
+      self.text_text_area_1.text = ''  # Clear the text box
+      self.load_comments()  # Reload the comments
+    else:
+      alert("Comment cannot be empty.")
   
   def format_ingredients(self, ingredients):
     return "\n".join([f"{ing['quantity']} {ing['unit']} {ing['name']}" for ing in ingredients])
@@ -62,3 +79,14 @@ class RecipeCard(RecipeCardTemplate):
 
     # Aktualisiere den Favoriten-Status im UI
     self.update_favorite_status()
+
+  def button_1_click(self, **event_args):
+    """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""
+    comment_text = self.text_area_1.text
+    if comment_text:
+      anvil.server.call('add_comment', self.recipe['RecipeID'], comment_text)
+      self.text_text_area_1.text = ''  # Clear the text box
+      self.load_comments()  # Reload the comments
+    else:
+      alert("Comment cannot be empty.")
+

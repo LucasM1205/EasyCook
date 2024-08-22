@@ -179,7 +179,7 @@ components:
           layout_properties: {grid_position: 'DSGCEQ,XYKCFD'}
           components:
           - name: label_6
-            properties: {text: Name, font_size: 18}
+            properties: {text: Name, font_size: 18, bold: true}
             type: Label
             layout_properties: {grid_position: 'OZWMQH,VPJPTK'}
         - name: column_panel_4
@@ -188,7 +188,7 @@ components:
           layout_properties: {grid_position: 'DSGCEQ,RAEGUU'}
           components:
           - name: label_7
-            properties: {text: Category, font_size: 18}
+            properties: {text: Category, font_size: 18, bold: true}
             type: Label
             layout_properties: {grid_position: 'RBXIJQ,VGZZRN'}
         - name: column_panel_5
@@ -197,7 +197,7 @@ components:
           layout_properties: {grid_position: 'DSGCEQ,TFRUWG'}
           components:
           - name: label_8
-            properties: {text: '', font_size: 18, visible: false}
+            properties: {text: Recipe, font_size: 18, visible: true, bold: true}
             type: Label
             layout_properties: {grid_position: 'HLDDMF,MSKVFV'}
       - name: favorites_repeating_panel

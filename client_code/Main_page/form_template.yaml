@@ -106,7 +106,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'YDMEUI,LDLTOB'}
       - name: elevated_button_2
-        properties: {text: Veggie, role: elevated-button, font_size: 18}
+        properties: {text: Veggie, role: elevated-button, font_size: 18, bold: false}
         type: Button
         layout_properties: {grid_position: 'HTQQAT,HBPDKP'}
         event_bindings: {click: elevated_button_2_click}
@@ -120,7 +120,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'ONXUBI,DGUQHO'}
       - name: elevated_button_3
-        properties: {text: Meat, role: elevated-button, font_size: 18}
+        properties: {text: Meat, role: elevated-button, font_size: 18, bold: false}
         type: Button
         layout_properties: {grid_position: 'ENBSLE,WGRZBO'}
         event_bindings: {click: elevated_button_3_click}
@@ -134,7 +134,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'DLJQPJ,IKKQGG'}
       - name: elevated_button_4
-        properties: {text: Sweets, role: elevated-button, font_size: 18}
+        properties: {text: Sweets, role: elevated-button, font_size: 18, bold: false}
         type: Button
         layout_properties: {grid_position: 'HEDYDE,RGEINO'}
         event_bindings: {click: elevated_button_4_click}

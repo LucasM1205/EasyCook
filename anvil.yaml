@@ -23,7 +23,7 @@ services:
   client_config: {}
   server_config: {}
 metadata: {title: EasyCook, logo_img: 'asset:EasyCook_logo.png'}
-startup: {type: form, module: Landing_page}
+startup: {type: form, module: Landing_page_copy}
 db_schema:
   users:
     title: Users

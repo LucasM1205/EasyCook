@@ -1,0 +1,67 @@
+container:
+  type: HtmlTemplate
+  properties:
+    html: |
+      <div class="landing-page-container">
+          <div class="overlay">
+              <div class="content">
+                  <h1>Are you hungry?</h1>
+                  <!--<p>Welcome to Our Recipe App</p>-->
+                  <button id="get-started" class="anvil-component">Get Started</button>
+              </div>
+          </div>
+      </div>
+
+      <style>
+          .landing-page-container {
+              background-image: url('_/theme/Landing_page_background.jpg');
+              background-size: cover;
+              background-position: center;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+
+          .overlay {
+              background-color: rgba(0, 0, 0, 0.5);
+              padding: 50px;
+              border-radius: 10px;
+              text-align: center;
+              color: white;
+          }
+
+          .content h1 {
+              font-size: 3rem;
+              margin-bottom: 20px;
+          }
+
+          .content p {
+              font-size: 1.5rem;
+              margin-bottom: 30px;
+          }
+
+          #get-started {
+              background-color: #e1e1e1;
+              color: black;
+              padding: 10px 20px;
+              font-size: 1.2rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+
+          #get-started:hover {
+              background-color: #c8b192;
+          }
+      </style>
+
+      <script>
+          function assignButtonEventHandler() {
+              document.getElementById('get-started').onclick = function() {
+                  anvil.callPython('get_started_click');
+              };
+          }
+      </script>
+components: []
+is_package: true

@@ -79,6 +79,10 @@ roles:
 - name: favorite-checkbox
   components: [Checkbox, CheckBox]
   display_in_toolbox: true
+- name: transparent-tonal-card
+  components: [ColumnPanel]
+  display_in_toolbox: true
+  title: Transparent-tonal-card
 color_scheme:
   preset_groups:
   - name: Colour Scheme

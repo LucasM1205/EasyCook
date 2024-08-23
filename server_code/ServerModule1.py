@@ -187,7 +187,37 @@ def get_comments_for_recipe(recipe_id):
         })
     return comment_list
 
+@anvil.server.callable
+def send_recipe_suggestion(name, description, duration, ingredients, preparation_steps):
+    try:
+        # Get current user
+        user = anvil.users.get_user()
+        user_email = user['email'] if user else 'Unknown user'
 
+        # Zeilenumbrüche in HTML-Zeilenumbrüche umwandeln
+        ingredients_html = ingredients.replace('\n', '<br>')
+        preparation_steps_html = preparation_steps.replace('\n', '<br>')
+
+        # HTML-Inhalt für die E-Mail
+        html_content = f"""
+        <p><strong>A user has suggested a new recipe:</strong></p>
+        <p><strong>Suggested by:</strong> {user_email}</p>
+        <p><strong>Name:</strong> {name}</p>
+        <p><strong>Description:</strong> {description}</p>
+        <p><strong>Duration:</strong> {duration} minutes</p>
+        <p><strong>Ingredients:</strong><br>{ingredients_html}</p>
+        <p><strong>Preparation Steps:</strong><br>{preparation_steps_html}</p>
+        """
+
+        # Send email
+        anvil.email.send(
+            #to="anvil_acc@outlook.com",
+            subject="New Recipe Suggestion",
+            html=html_content
+        )
+        return "success"
+    except Exception as e:
+        return str(e)
 
 
 

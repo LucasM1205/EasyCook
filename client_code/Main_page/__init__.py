@@ -69,4 +69,4 @@ class Main_page(Main_pageTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Main_page.Form1')
+    open_form('Main_page.RecipeSuggestionForm')

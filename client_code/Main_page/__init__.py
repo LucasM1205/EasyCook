@@ -66,3 +66,7 @@ class Main_page(Main_pageTemplate):
     selected_recipe = self.search_results_panel.selected_item
     if selected_recipe:
       open_form('RecipeCard', recipe=selected_recipe)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Main_page.Form1')

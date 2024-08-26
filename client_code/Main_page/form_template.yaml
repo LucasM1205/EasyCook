@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {background: '#e1e1e1'}
+  properties: {background: '#e1e1e1', wrap_on: mobile, visible: true}
 components:
 - name: column_panel_header
   properties: {}
@@ -25,7 +25,7 @@ components:
   layout_properties: {grid_position: 'NLVPEV,CAINMI'}
   components:
   - name: column_panel
-    properties: {background: '#fff', role: tonal-card}
+    properties: {background: '#fff', role: tonal-card, wrap_on: mobile}
     type: ColumnPanel
     layout_properties: {grid_position: 'WMTVJK,JBKDLV'}
     components:
@@ -58,7 +58,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'CDZEJO,NAUOXW'}
   - name: column_panel_1
-    properties: {role: tonal-card, background: '#c8b192'}
+    properties: {role: tonal-card, background: '#c8b192', wrap_on: mobile}
     type: ColumnPanel
     layout_properties: {grid_position: 'XTJHHJ,XTSUOI'}
     components:

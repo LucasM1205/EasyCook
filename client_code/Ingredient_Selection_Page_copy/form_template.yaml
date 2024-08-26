@@ -30,7 +30,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'OOTTGH,XKNDFB'}
 - name: column_panel_1
-  properties: {}
+  properties: {wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
   components:
@@ -74,7 +74,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
   - name: column_panel_5
-    properties: {background: '#fff', role: tonal-card}
+    properties: {background: '#fff', role: tonal-card, wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'BIRZSS,TINHRP'}
     components:

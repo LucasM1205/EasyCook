@@ -33,6 +33,12 @@ components:
       properties: {text: Search for Recipe, bold: true, font_size: 24}
       type: Label
       layout_properties: {grid_position: 'WXZSXZ,RLXIAQ'}
+    - name: label_10
+      properties:
+        text: |
+          You can search by recipe names, descriptions, or ingredients. For example, try typing 'pasta' to find recipes with pasta in the title or as an ingredient. Please note that ingredients might have different names or variations. For instance, 'pasta' could also be referred to as 'noodles'. Try different terms to ensure the best results.
+      type: Label
+      layout_properties: {grid_position: 'RRHHYG,JWLNTF'}
     - name: search_box
       properties: {background: '#c8b192', foreground: '#ffff', role: rounded-textbox, align: left}
       type: TextBox
@@ -57,7 +63,7 @@ components:
     layout_properties: {grid_position: 'XTJHHJ,XTSUOI'}
     components:
     - name: label_2
-      properties: {text: Quickly find a Recipe, bold: true, background: '', font_size: 32, foreground: '#fff'}
+      properties: {text: Quickly find a Recipe with Ingredients you have at Home, bold: true, background: '', font_size: 32, foreground: '#fff', align: left}
       type: Label
       layout_properties: {grid_position: 'IIYYAO,BKIMZQ'}
     - name: column_panel_6

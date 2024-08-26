@@ -48,7 +48,7 @@ components:
   layout_properties: {grid_position: 'IKVYUQ,SROYPE'}
   components:
   - name: button_1
-    properties: {text: Back, background: '#c8b192', role: tonal-button, font_size: 16, align: center}
+    properties: {text: Back, background: '#c8b192', role: tonal-button, font_size: 16, align: center, bold: false, foreground: '#fff'}
     type: Button
     layout_properties: {grid_position: 'KAVWWZ,QWQYAA'}
     event_bindings: {click: button_1_click}

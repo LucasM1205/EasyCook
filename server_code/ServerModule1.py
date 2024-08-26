@@ -10,12 +10,26 @@ from datetime import datetime, timedelta
 
 @anvil.server.callable
 def search_recipes(keyword):
-    # Abrufen aller Rezepte
+  # Abrufen aller Rezepte
     all_recipes = app_tables.recipes.search(tables.order_by("Name"))
+    keyword_lower = keyword.lower()
+
+    matching_recipes = []
     
-    # Filtern der Rezepte nach Keyword
-    matching_recipes = [recipe for recipe in all_recipes if keyword.lower() in recipe['Name'].lower()]
-    
+    for recipe in all_recipes:
+        # Check if the keyword is in the name or description
+        if keyword_lower in recipe['Name'].lower() or keyword_lower in recipe['Description'].lower():
+            matching_recipes.append(recipe)
+            continue
+        
+        # Check if the keyword is in the ingredients
+        recipe_ingredients = app_tables.recipeingredients.search(RecipeID=recipe)
+        for ri in recipe_ingredients:
+            ingredient_name = ri['IngredientID']['Name'].lower()
+            if keyword_lower in ingredient_name:
+                matching_recipes.append(recipe)
+                break  # Break after the first match to avoid duplicate entries
+
     return matching_recipes
 
 @anvil.server.callable

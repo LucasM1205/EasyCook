@@ -91,12 +91,8 @@ components:
     properties: {item_template: Main_page.Meat_category.ItemTemplate4}
     type: RepeatingPanel
     layout_properties: {grid_position: 'ZRPMZW,UKZRSH'}
-  - name: spacer_3
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'MZHCVE,GGLIFZ'}
   - name: spacer_4
-    properties: {height: 32}
+    properties: {height: '64'}
     type: Spacer
     layout_properties: {grid_position: 'FONCDL,SFVEBC'}
 - name: column_panel_10
@@ -109,7 +105,7 @@ components:
   layout_properties: {grid_position: 'ULNDFM,EKBNMG'}
   components:
   - name: button_1
-    properties: {text: button_1, background: '#c8b192', foreground: '#fff', role: elevated-button, align: right}
+    properties: {text: Back, background: '#c8b192', foreground: '#fff', role: elevated-button, align: right}
     type: Button
     layout_properties: {grid_position: 'DWRDIR,FZMFYQ'}
 - name: spacer_1

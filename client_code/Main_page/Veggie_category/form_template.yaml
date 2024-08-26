@@ -30,7 +30,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'RUIWOS,IOJUSM'}
   - name: label_1
-    properties: {text: Veggie recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null, align: center}
+    properties: {text: Veggie recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null, align: left}
     type: Label
     layout_properties: {grid_position: 'SFPGKX,NFXXKT'}
   - name: spacer_1
@@ -100,6 +100,23 @@ components:
     properties: {height: '64'}
     type: Spacer
     layout_properties: {grid_position: 'NAVWZL,CHBIVO'}
+- name: column_panel_11
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LDPCHS,ETRPUK'}
+- name: column_panel_12
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LDPCHS,HSCCJT'}
+  components:
+  - name: button_1
+    properties: {text: Back, background: '#c8b192', foreground: '#fff', role: elevated-button, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'BRNTPR,DYNSLG'}
+- name: spacer_3
+  properties: {height: '64'}
+  type: Spacer
+  layout_properties: {grid_position: 'BTDYWH,HNSVRI'}
 - name: data_grid_1
   properties:
     role: tonal-data-grid

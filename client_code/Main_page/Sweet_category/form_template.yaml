@@ -100,6 +100,24 @@ components:
   properties: {height: '64'}
   type: Spacer
   layout_properties: {grid_position: 'YQPBYI,LGYCLO'}
+- name: column_panel_11
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CQZEAD,QVYGHA'}
+- name: column_panel_12
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CQZEAD,VCOYHD'}
+  components:
+  - name: button_1
+    properties: {text: Back, background: '#c8b192', foreground: '#fff', font_size: 17, role: elevated-button}
+    type: Button
+    layout_properties: {grid_position: 'HUKHQM,LGKJRM'}
+    event_bindings: {click: button_1_click}
+- name: spacer_3
+  properties: {height: '64'}
+  type: Spacer
+  layout_properties: {grid_position: 'RVWQRX,EPCJWT'}
 - name: data_grid_1
   properties:
     columns:

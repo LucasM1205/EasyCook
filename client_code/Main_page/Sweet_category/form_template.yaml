@@ -3,16 +3,16 @@ container:
   properties: {background: '#e1e1e1'}
 components:
 - name: column_panel_1
-  properties: {}
+  properties: {wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'WPENGH,GBECMX'}
   components:
   - name: column_panel_2
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'AWWZBY,BGHFPX'}
   - name: column_panel_3
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'AWWZBY,BASXYJ'}
   - name: link_2
@@ -38,17 +38,17 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'CURHKZ,UWIKFT'}
 - name: column_panel_4
-  properties: {}
+  properties: {wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'BHNGGN,BEWGUP'}
   components:
   - name: column_panel_5
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'UQONWQ,KIKKYJ'}
     components:
     - name: column_panel_6
-      properties: {}
+      properties: {wrap_on: never}
       type: ColumnPanel
       layout_properties: {grid_position: 'EFPLYE,RYOKDM'}
       components:
@@ -57,7 +57,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'NBZVQK,BYHJME'}
     - name: column_panel_7
-      properties: {}
+      properties: {wrap_on: never}
       type: ColumnPanel
       layout_properties: {grid_position: 'EFPLYE,FHVFLN'}
       components:
@@ -66,7 +66,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'HEHLAT,RGAKCX'}
     - name: column_panel_8
-      properties: {}
+      properties: {wrap_on: never}
       type: ColumnPanel
       layout_properties: {grid_position: 'EFPLYE,KZHJJW'}
       components:
@@ -75,7 +75,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'GDZBSD,ZWSNZQ'}
     - name: column_panel_9
-      properties: {}
+      properties: {wrap_on: never}
       type: ColumnPanel
       layout_properties: {grid_position: 'EFPLYE,CSFUND'}
       components:
@@ -84,7 +84,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'FAYINH,OPXJOU'}
     - name: column_panel_10
-      properties: {}
+      properties: {wrap_on: never}
       type: ColumnPanel
       layout_properties: {grid_position: 'EFPLYE,JVGIOP'}
       components:
@@ -101,11 +101,11 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'YQPBYI,LGYCLO'}
 - name: column_panel_11
-  properties: {}
+  properties: {wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'CQZEAD,QVYGHA'}
 - name: column_panel_12
-  properties: {}
+  properties: {wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'CQZEAD,VCOYHD'}
   components:

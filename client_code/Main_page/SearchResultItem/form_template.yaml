@@ -1,5 +1,7 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {wrap_on: never}
 components:
 - name: link_1
   properties: {}

@@ -1,13 +1,15 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {wrap_on: never}
 components:
 - name: column_panel_4
-  properties: {background: '#c8b192', role: tonal-card}
+  properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
   type: ColumnPanel
   layout_properties: {grid_position: 'OQYTME,MTWBZI'}
   components:
   - name: column_panel_1
-    properties: {role: null, background: ''}
+    properties: {role: null, background: '', wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,RGSGMG'}
     components:
@@ -16,7 +18,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'CMGMJA,BSSXXG'}
   - name: column_panel_6
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,WALMLI'}
     components:
@@ -25,7 +27,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RHLJPQ,SVQQUW'}
   - name: column_panel_2
-    properties: {role: null, background: ''}
+    properties: {role: null, background: '', wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,JVAHMH'}
     components:
@@ -34,7 +36,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UXQXSF,ODHPRR'}
   - name: column_panel_5
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,WEWETU'}
     components:
@@ -43,7 +45,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'IAWFBU,EINWLC'}
   - name: column_panel_3
-    properties: {background: ''}
+    properties: {background: '', wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,PEZXJB'}
     components:

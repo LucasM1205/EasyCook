@@ -25,6 +25,19 @@ components:
       type: CheckBox
       layout_properties: {grid_position: 'YLGNKM,RRWVTD'}
       event_bindings: {change: check_box_favorite_change}
+  - name: column_panel_4
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XPPGHK,XHHTZN'}
+  - name: column_panel_5
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XPPGHK,JEVSSZ'}
+    components:
+    - name: label_5
+      properties: {text: xxx People's favourite}
+      type: Label
+      layout_properties: {grid_position: 'QNMMOP,AAEMTQ'}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer

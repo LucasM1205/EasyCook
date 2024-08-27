@@ -350,10 +350,10 @@ color_scheme:
   - {name: On Tertiary Container, color: '#370B1E'}
   - {name: Error, color: '#B3261E'}
   - {name: Background, color: '#FFFBFE'}
-  - {name: Surface, color: '#FFFBFE'}
+  - {name: Surface, color: '#e1e1e1'}
   - {name: On Background, color: '#1C1B1F'}
   - {name: On Surface, color: '#1C1B1F'}
-  - {name: Surface Variant, color: '#E7E0EC'}
+  - {name: Surface Variant, color: '#e1e1e1'}
   - {name: On Surface Variant, color: '#49454E'}
   - {name: Outline, color: '#79747E'}
   - {name: On Disabled, color: 'rgba(28, 27, 31, 0.38)'}
@@ -364,4 +364,4 @@ color_scheme:
   - {name: Dark Overlay 2, color: 'rgba(30, 25, 43, 0.12)'}
   - {name: Primary Overlay 1, color: 'rgba(103, 80, 164, 0.05)'}
   - {name: Primary Overlay 2, color: 'rgba(103, 80, 164, 0.08)'}
-  - {name: Primary Overlay 3, color: 'rgba(103, 80, 164, 0.11)'}
+  - {name: Primary Overlay 3, color: 'rgba(225, 225, 225, 0.2)'}

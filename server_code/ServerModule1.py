@@ -136,6 +136,8 @@ def add_to_favorites(recipe):
         else:
             recipe['FavoritesCount'] = 1
         #recipe.save()
+        # Speichern des Rezepts nach der Änderung
+        recipe.update(FavoritesCount=recipe['FavoritesCount'])
 
 @anvil.server.callable
 def remove_from_favorites(recipe):
@@ -149,6 +151,8 @@ def remove_from_favorites(recipe):
         else:
           recipe['FavoritesCount'] = 0
         #recipe.save()
+        # Speichern des Rezepts nach der Änderung
+        recipe.update(FavoritesCount=recipe['FavoritesCount'])
 
 @anvil.server.callable
 def get_popular_recipes(limit=3):

@@ -25,7 +25,13 @@ class RecipeCard(RecipeCardTemplate):
     self.label_name.text = details['Name']
     self.label_ingredients.text = self.format_ingredients(details['Ingredients'])
     self.label_preparation.text = details['PreparationSteps']
+    self.label_prep_time.text = f"Preparation Time: {self.recipe['PreparationTime']} Minutes"
 
+
+    #Lade die Anzahl der Favoriten
+    self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"
+    
+    
     # Lade die Kommentare
     self.load_comments()
     
@@ -74,6 +80,7 @@ class RecipeCard(RecipeCardTemplate):
 
     # Aktualisiere den Favoriten-Status im UI
     self.update_favorite_status()
+    self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"
 
   def button_1_click(self, **event_args):
     """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""

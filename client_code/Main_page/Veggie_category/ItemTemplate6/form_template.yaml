@@ -50,7 +50,7 @@ components:
     layout_properties: {grid_position: 'TYCHAS,CXSSRB'}
     components:
     - name: button_1
-      properties: {text: Open Recipe, role: elevated-button, align: left}
+      properties: {text: Open Recipe, role: elevated-button, align: left, background: '#fff'}
       type: Button
       layout_properties: {grid_position: 'JTCUAD,UKDAOQ'}
       event_bindings: {click: button_1_click}

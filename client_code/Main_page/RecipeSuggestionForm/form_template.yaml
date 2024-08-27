@@ -62,7 +62,7 @@ components:
     layout_properties: {grid_position: 'CFJICK,EGVUBV'}
     components:
     - name: button_submit
-      properties: {text: Submit, font_size: 18, role: elevated-button}
+      properties: {text: Submit, font_size: 18, role: elevated-button, background: '#fff'}
       type: Button
       layout_properties: {grid_position: 'AVQDVZ,FNIYTC'}
       event_bindings: {click: button_submit_click}
@@ -72,7 +72,7 @@ components:
     layout_properties: {grid_position: 'CFJICK,MAIPXM'}
     components:
     - name: button_cancel
-      properties: {text: Cancel, role: elevated-button, font_size: 18}
+      properties: {text: Cancel, role: elevated-button, font_size: 18, background: '#fff'}
       type: Button
       layout_properties: {grid_position: 'KRFLNQ,VDVXMP'}
       event_bindings: {click: button_cancel_click}

@@ -50,7 +50,7 @@ components:
     layout_properties: {grid_position: 'GULGTB,SRFBLI'}
     components:
     - name: button_open_recipe
-      properties: {text: Open Recipe, role: elevated-button, align: left}
+      properties: {text: Open Recipe, role: elevated-button, align: left, background: '#fff'}
       type: Button
       layout_properties: {grid_position: 'SRZGTX,RBQPLW'}
       event_bindings: {click: button_open_recipe_click}

@@ -16,7 +16,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'MIMSXQ,EVFGWX'}
   - name: col
-    properties: {}
+    properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'MIMSXQ,FCCNWV'}
     components:
@@ -29,15 +29,28 @@ components:
     properties: {wrap_on: never}
     type: ColumnPanel
     layout_properties: {grid_position: 'XPPGHK,XHHTZN'}
+    components:
+    - name: label_prep_time
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'TGBWND,TNSQYB'}
+  - name: column_panel_6
+    properties: {wrap_on: never}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XPPGHK,AZVUIN'}
+    components:
+    - name: label_favorites_count
+      properties: {align: left}
+      type: Label
+      layout_properties: {grid_position: 'TRXMOX,ZJWBTV'}
   - name: column_panel_5
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XPPGHK,JEVSSZ'}
-    components:
-    - name: label_5
-      properties: {text: xxx People's favourite}
-      type: Label
-      layout_properties: {grid_position: 'QNMMOP,AAEMTQ'}
+    layout_properties: {grid_position: 'LDKWIY,ALWTOH'}
+  - name: column_panel_7
+    properties: {wrap_on: never}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LDKWIY,MLPPHQ'}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer

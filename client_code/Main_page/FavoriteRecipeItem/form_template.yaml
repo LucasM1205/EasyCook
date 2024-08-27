@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {wrap_on: never}
+  properties: {wrap_on: never, background: ''}
 components:
 - name: column_panel_4
   properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
@@ -23,7 +23,7 @@ components:
       layout_properties: {grid_position: 'AJTDKA,KWFRAA'}
       components:
       - name: label_category
-        properties: {}
+        properties: {foreground: '', background: ''}
         type: Label
         layout_properties: {grid_position: 'DFGMUT,HPPNKC'}
     - name: column_panel_3
@@ -32,7 +32,7 @@ components:
       layout_properties: {grid_position: 'AJTDKA,CPTWML'}
       components:
       - name: show_recipe_button
-        properties: {text: Open Recipe, role: elevated-button, align: left}
+        properties: {text: Open Recipe, role: elevated-button, align: left, background: '#fff'}
         type: Button
         layout_properties: {grid_position: 'XDQMLE,YPLZUM'}
         event_bindings: {click: show_recipe_button_click}

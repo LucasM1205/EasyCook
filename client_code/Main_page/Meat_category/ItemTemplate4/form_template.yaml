@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {wrap_on: never}
+  properties: {wrap_on: never, background: ''}
 components:
 - name: column_panel_4
   properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
@@ -50,7 +50,7 @@ components:
     layout_properties: {grid_position: 'LXKSJD,PEZXJB'}
     components:
     - name: button_open_recipe
-      properties: {text: Open Recipe, role: elevated-button, icon_align: left, align: left}
+      properties: {text: Open Recipe, role: elevated-button, icon_align: left, align: left, background: '#fff'}
       type: Button
       layout_properties: {grid_position: 'PDZMIR,FIYXOW'}
       event_bindings: {click: button_open_recipe_click}

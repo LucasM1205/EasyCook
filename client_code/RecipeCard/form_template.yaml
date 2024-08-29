@@ -4,46 +4,64 @@ components:
   properties: {height: 32}
   type: Spacer
 - components:
-  - layout_properties: {grid_position: 'MIMSXQ,EVFGWX'}
-    name: label_name
-    properties: {bold: true, font: '', font_size: 30, text: RecipeName}
-    type: Label
+  - components:
+    - layout_properties: {grid_position: 'RRNKHE,WXBAPC'}
+      name: label_name
+      properties: {bold: true, font: '', font_size: 30, text: RecipeName}
+      type: Label
+    layout_properties: {grid_position: 'MIMSXQ,EVFGWX'}
+    name: column_panel_10
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'MIMSXQ,TUSKNG'}
+    name: column_panel_11
+    properties: {wrap_on: never}
+    type: ColumnPanel
   - components:
     - event_bindings: {change: check_box_favorite_change}
       layout_properties: {grid_position: 'YLGNKM,RRWVTD'}
       name: check_box_favorite
       properties: {text: Add to favorites}
       type: CheckBox
+    - layout_properties: {grid_position: 'JZIXFK,YXFAPO'}
+      name: label_favorites_count
+      properties: {align: left}
+      type: Label
     layout_properties: {grid_position: 'MIMSXQ,FCCNWV'}
     name: col
     properties: {wrap_on: never}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'TGBWND,TNSQYB'}
+    - layout_properties: {grid_position: 'IIORDB,NKBABQ'}
+      name: label_6
+      properties: {text: 'Preparation Time: '}
+      type: Label
+    - layout_properties: {grid_position: 'IIORDB,IFKMOU'}
       name: label_prep_time
       properties: {}
       type: Label
-    layout_properties: {grid_position: 'XPPGHK,XHHTZN'}
-    name: column_panel_4
+    layout_properties: {grid_position: 'XPPGHK,QQBJML'}
+    name: column_panel_9
     properties: {wrap_on: never}
     type: ColumnPanel
-  - components:
-    - layout_properties: {grid_position: 'TRXMOX,ZJWBTV'}
-      name: label_favorites_count
-      properties: {align: left}
-      type: Label
+  - components: []
+    layout_properties: {grid_position: 'XPPGHK,RFONBH'}
+    name: column_panel_4
+    properties: {}
+    type: ColumnPanel
+  - components: []
     layout_properties: {grid_position: 'XPPGHK,AZVUIN'}
     name: column_panel_6
     properties: {wrap_on: never}
     type: ColumnPanel
   - components:
-    - layout_properties: {grid_position: 'ZUQFBZ,XBIXJB'}
+    - layout_properties: {grid_position: 'MSFEWO,XRHSYD'}
       name: label_5
       properties: {align: left, text: 'Difficulty:'}
       type: Label
-    - layout_properties: {grid_position: 'ZUQFBZ,KMESQI'}
+    - layout_properties: {grid_position: 'MSFEWO,AJAUCN'}
       name: label_difficulty
-      properties: {}
+      properties: {align: left}
       type: Label
     layout_properties: {grid_position: 'LDKWIY,UUCYOF'}
     name: column_panel_8
@@ -54,7 +72,8 @@ components:
     name: column_panel_5
     properties: {wrap_on: never}
     type: ColumnPanel
-  - layout_properties: {grid_position: 'LDKWIY,MLPPHQ'}
+  - components: []
+    layout_properties: {grid_position: 'LDKWIY,MLPPHQ'}
     name: column_panel_7
     properties: {wrap_on: never}
     type: ColumnPanel
@@ -105,7 +124,7 @@ components:
   type: Image
 - layout_properties: {grid_position: 'DOVRWP,NKJNHZ'}
   name: spacer_5
-  properties: {height: '96', spacing_below: small}
+  properties: {height: '64', spacing_below: small}
   type: Spacer
 - components:
   - layout_properties: {grid_position: 'DHVRZK,QLWWKO'}

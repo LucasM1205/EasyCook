@@ -40,6 +40,7 @@ unique_ids:
     Main_page.Veggie_category.RowTemplate1.ItemTemplate3: '1723018107178648126691902.9993'
     RecipeCard: '1723700636352863498440433.0063'
     RecipeCard.CommentTemplate: '1724319217141640447523308.4459'
+    RecipeCard.RowTemplate5: '1724915280596299405158181.6843'
     RecipeResultsPage: '1723118083649148275964882.6173'
     RecipeResultsPage.RecipeResultItem: '1723120673783311742227255.164'
   modules: {}

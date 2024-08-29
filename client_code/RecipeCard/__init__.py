@@ -25,7 +25,8 @@ class RecipeCard(RecipeCardTemplate):
     self.label_name.text = details['Name']
     self.label_ingredients.text = self.format_ingredients(details['Ingredients'])
     self.label_preparation.text = details['PreparationSteps']
-    self.label_prep_time.text = f"Preparation Time: {self.recipe['PreparationTime']} Minutes"
+    #self.label_prep_time.text = f"Preparation Time: {self.recipe['PreparationTime']} Minutes"
+    self.label_prep_time.text = f"{self.recipe['PreparationTime']} Minutes"
 
     #Lade die Anzahl der Favoriten
     self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"

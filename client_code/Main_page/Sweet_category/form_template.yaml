@@ -105,7 +105,7 @@ components:
   - event_bindings: {click: button_1_click}
     layout_properties: {grid_position: 'HUKHQM,LGKJRM'}
     name: button_1
-    properties: {background: '#c8b192', font_size: 17, foreground: '#fff', role: elevated-button, text: Back}
+    properties: {align: right, background: '#c8b192', font_size: 17, foreground: '#fff', role: elevated-button, text: Back}
     type: Button
   layout_properties: {grid_position: 'CQZEAD,VCOYHD'}
   name: column_panel_12

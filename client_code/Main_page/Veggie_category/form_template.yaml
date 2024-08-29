@@ -102,9 +102,10 @@ components:
   properties: {wrap_on: never}
   type: ColumnPanel
 - components:
-  - layout_properties: {grid_position: 'BRNTPR,DYNSLG'}
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'BRNTPR,DYNSLG'}
     name: button_1
-    properties: {background: '#c8b192', font_size: 16, foreground: '#fff', role: elevated-button, text: Back}
+    properties: {align: right, background: '#c8b192', font_size: 16, foreground: '#fff', role: elevated-button, text: Back}
     type: Button
   layout_properties: {grid_position: 'LDPCHS,HSCCJT'}
   name: column_panel_12

@@ -24,3 +24,7 @@ class Veggie_category(Veggie_categoryTemplate):
     def link_2_click(self, **event_args):
         """This method is called when the link is clicked"""
         open_form('Main_page')
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('Main_page')

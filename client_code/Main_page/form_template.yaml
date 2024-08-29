@@ -211,7 +211,7 @@ components:
       - event_bindings: {click: button_1_click}
         layout_properties: {grid_position: 'HCENDC,DQKRRI'}
         name: button_1
-        properties: {align: full, background: '#fff', bold: true, font_size: 18, role: elevated-button, text: Share it with us!}
+        properties: {align: center, background: '#fff', bold: true, font_size: 18, role: elevated-button, text: Share it with us!}
         type: Button
       - layout_properties: {grid_position: 'KJAIAD,SPYNHZ'}
         name: spacer_9

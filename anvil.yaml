@@ -1,153 +1,153 @@
 allow_embedding: false
-package_name: EasyCook2
+db_schema:
+  comments:
+    client: search
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Recipe
+      target: recipes
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      name: User
+      target: users
+      type: link_single
+    - admin_ui: {order: 2, width: 200}
+      name: CommentText
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: Timestamp
+      type: datetime
+    server: full
+    title: Comments
+  favorites:
+    client: full
+    columns:
+    - admin_ui: {width: 200}
+      name: user
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: recipe
+      target: recipes
+      type: link_single
+    server: full
+    title: Favorites
+  ingredients:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: IngredientID
+      type: number
+    - admin_ui: {width: 200}
+      name: Name
+      type: string
+    - admin_ui: {width: 200}
+      name: Category
+      type: string
+    - admin_ui: {width: 200}
+      name: Unit
+      type: string
+    server: full
+    title: Ingredients
+  recipeingredients:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: RecipeID
+      target: recipes
+      type: link_single
+    - admin_ui: {width: 200}
+      name: IngredientID
+      target: ingredients
+      type: link_single
+    - admin_ui: {width: 200}
+      name: Quantity
+      type: number
+    server: full
+    title: RecipeIngredients
+  recipes:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: RecipeID
+      type: number
+    - admin_ui: {width: 200}
+      name: Name
+      type: string
+    - admin_ui: {width: 200}
+      name: Description
+      type: string
+    - admin_ui: {width: 200}
+      name: Category
+      type: string
+    - admin_ui: {width: 200}
+      name: PreparationTime
+      type: number
+    - admin_ui: {width: 200}
+      name: RecipePicture
+      type: media
+    - admin_ui: {width: 200}
+      name: PreparationSteps
+      type: string
+    - admin_ui: {width: 200}
+      name: FavoritesCount
+      type: number
+    server: full
+    title: Recipes
+  users:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 437}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: email_confirmation_key
+      type: string
+    server: full
+    title: Users
+dependencies: []
+metadata: {logo_img: 'asset:EasyCook_logo.png', title: EasyCook}
 name: EasyCook2
-startup_form: null
+package_name: EasyCook2
 renamed: true
 runtime_options:
-  version: 2
   client_version: '3'
-  server_version: python3-sandbox
   server_spec: {base: python310-standard}
-dependencies: []
+  server_version: python3-sandbox
+  version: 2
 services:
-- source: /runtime/services/tables.yml
-  client_config: {}
+- client_config: {}
   server_config: {}
-- source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: true, use_email: true, confirm_email: false, use_google: true, allow_remember_me: false, remember_me_days: 30, require_secure_passwords: true}
+  source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: false, allow_signup: true, confirm_email: false, enable_automatically: true, remember_me_days: 30, require_secure_passwords: true, use_email: true, use_google: true}
   server_config: {user_table: users}
-- source: /runtime/services/google.yml
-  client_config: {}
+  source: /runtime/services/anvil/users.yml
+- client_config: {}
   server_config: {}
-- source: /runtime/services/anvil/email.yml
-  client_config: {}
+  source: /runtime/services/google.yml
+- client_config: {}
   server_config: {}
-metadata: {title: EasyCook, logo_img: 'asset:EasyCook_logo.png'}
-startup: {type: form, module: Landing_page_copy}
-db_schema:
-  users:
-    title: Users
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {width: 437}
-      type: string
-    - name: n_password_failures
-      admin_ui: {width: 200}
-      type: number
-    - name: confirmed_email
-      admin_ui: {width: 200}
-      type: bool
-    - name: signed_up
-      admin_ui: {width: 200}
-      type: datetime
-    - name: remembered_logins
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: email_confirmation_key
-      admin_ui: {width: 200}
-      type: string
-  ingredients:
-    title: Ingredients
-    client: search
-    server: full
-    columns:
-    - name: IngredientID
-      admin_ui: {width: 200}
-      type: number
-    - name: Name
-      admin_ui: {width: 200}
-      type: string
-    - name: Category
-      admin_ui: {width: 200}
-      type: string
-    - name: Unit
-      admin_ui: {width: 200}
-      type: string
-  recipes:
-    title: Recipes
-    client: search
-    server: full
-    columns:
-    - name: RecipeID
-      admin_ui: {width: 200}
-      type: number
-    - name: Name
-      admin_ui: {width: 200}
-      type: string
-    - name: Description
-      admin_ui: {width: 200}
-      type: string
-    - name: Category
-      admin_ui: {width: 200}
-      type: string
-    - name: PreparationTime
-      admin_ui: {width: 200}
-      type: number
-    - name: RecipePicture
-      admin_ui: {width: 200}
-      type: media
-    - name: PreparationSteps
-      admin_ui: {width: 200}
-      type: string
-    - name: FavoritesCount
-      admin_ui: {width: 200}
-      type: number
-  recipeingredients:
-    title: RecipeIngredients
-    client: search
-    server: full
-    columns:
-    - name: RecipeID
-      admin_ui: {width: 200}
-      type: link_single
-      target: recipes
-    - name: IngredientID
-      admin_ui: {width: 200}
-      type: link_single
-      target: ingredients
-    - name: Quantity
-      admin_ui: {width: 200}
-      type: number
-  favorites:
-    title: Favorites
-    client: full
-    server: full
-    columns:
-    - name: user
-      admin_ui: {width: 200}
-      type: link_single
-      target: users
-    - name: recipe
-      admin_ui: {width: 200}
-      type: link_single
-      target: recipes
-  comments:
-    title: Comments
-    client: search
-    server: full
-    columns:
-    - name: Recipe
-      admin_ui: {order: 0, width: 200}
-      type: link_single
-      target: recipes
-    - name: User
-      admin_ui: {width: 200, order: 1}
-      type: link_single
-      target: users
-    - name: CommentText
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: Timestamp
-      admin_ui: {width: 200, order: 3}
-      type: datetime
+  source: /runtime/services/anvil/email.yml
+startup: {module: Landing_page_copy, type: form}
+startup_form: null

@@ -1,56 +1,56 @@
-is_package: true
-container:
-  type: ColumnPanel
-  properties: {wrap_on: never, background: ''}
 components:
-- name: column_panel_4
-  properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'OQYTME,MTWBZI'}
-  components:
-  - name: column_panel_1
-    properties: {role: null, background: '', wrap_on: never}
-    type: ColumnPanel
+- components:
+  - components:
+    - layout_properties: {grid_position: 'CMGMJA,BSSXXG'}
+      name: label_name
+      properties: {}
+      type: Label
     layout_properties: {grid_position: 'LXKSJD,RGSGMG'}
-    components:
-    - name: label_name
+    name: column_panel_1
+    properties: {background: '', role: null, wrap_on: never}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'RHLJPQ,SVQQUW'}
+      name: label_description
       properties: {}
       type: Label
-      layout_properties: {grid_position: 'CMGMJA,BSSXXG'}
-  - name: column_panel_6
-    properties: {wrap_on: never}
-    type: ColumnPanel
     layout_properties: {grid_position: 'LXKSJD,WALMLI'}
-    components:
-    - name: label_description
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'RHLJPQ,SVQQUW'}
-  - name: column_panel_2
-    properties: {role: null, background: '', wrap_on: never}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LXKSJD,JVAHMH'}
-    components:
-    - name: label_category
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'UXQXSF,ODHPRR'}
-  - name: column_panel_5
+    name: column_panel_6
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'LXKSJD,WEWETU'}
-    components:
-    - name: label_time
+  - components:
+    - layout_properties: {grid_position: 'UXQXSF,ODHPRR'}
+      name: label_category
       properties: {}
       type: Label
-      layout_properties: {grid_position: 'IAWFBU,EINWLC'}
-  - name: column_panel_3
+    layout_properties: {grid_position: 'LXKSJD,JVAHMH'}
+    name: column_panel_2
+    properties: {background: '', role: null, wrap_on: never}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'IAWFBU,EINWLC'}
+      name: label_time
+      properties: {}
+      type: Label
+    layout_properties: {grid_position: 'LXKSJD,WEWETU'}
+    name: column_panel_5
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  - components:
+    - event_bindings: {click: button_open_recipe_click}
+      layout_properties: {grid_position: 'PDZMIR,FIYXOW'}
+      name: button_open_recipe
+      properties: {align: left, background: '#fff', icon_align: left, role: elevated-button, text: Open Recipe}
+      type: Button
+    layout_properties: {grid_position: 'LXKSJD,PEZXJB'}
+    name: column_panel_3
     properties: {background: '', wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'LXKSJD,PEZXJB'}
-    components:
-    - name: button_open_recipe
-      properties: {text: Open Recipe, role: elevated-button, icon_align: left, align: left, background: '#fff'}
-      type: Button
-      layout_properties: {grid_position: 'PDZMIR,FIYXOW'}
-      event_bindings: {click: button_open_recipe_click}
+  layout_properties: {grid_position: 'OQYTME,MTWBZI'}
+  name: column_panel_4
+  properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
+  type: ColumnPanel
+container:
+  properties: {background: '', wrap_on: never}
+  type: ColumnPanel
+is_package: true

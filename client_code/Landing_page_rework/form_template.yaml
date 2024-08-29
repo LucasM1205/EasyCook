@@ -1,5 +1,5 @@
+components: []
 container:
-  type: HtmlTemplate
   properties:
     html: |
       <div class="landing-page-container">
@@ -63,5 +63,5 @@ container:
               };
           }
       </script>
-components: []
+  type: HtmlTemplate
 is_package: true

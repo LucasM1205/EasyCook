@@ -1,133 +1,133 @@
-container:
-  type: ColumnPanel
-  properties: {background: '#e1e1e1'}
 components:
-- name: column_panel_1
-  properties: {wrap_on: never}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'WPENGH,GBECMX'}
-  components:
-  - name: column_panel_2
+- components:
+  - layout_properties: {grid_position: 'AWWZBY,BGHFPX'}
+    name: column_panel_2
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AWWZBY,BGHFPX'}
-  - name: column_panel_3
+  - layout_properties: {grid_position: 'AWWZBY,JTEXJW'}
+    name: column_panel_3
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AWWZBY,JTEXJW'}
-  - name: link_2
+  - components:
+    - layout_properties: {grid_position: 'IHIXXV,ABRXFF'}
+      name: image_2
+      properties: {horizontal_align: center, source: _/theme/home.png}
+      type: Image
+    event_bindings: {click: link_2_click}
+    layout_properties: {grid_position: 'AWWZBY,BIZMAD'}
+    name: link_2
     properties: {icon_align: right}
     type: Link
-    layout_properties: {grid_position: 'AWWZBY,BIZMAD'}
-    components:
-    - name: image_2
-      properties: {source: _/theme/home.png, horizontal_align: center}
-      type: Image
-      layout_properties: {grid_position: 'IHIXXV,ABRXFF'}
-    event_bindings: {click: link_2_click}
-  - name: image_1
-    properties: {source: _/theme/meat.png, background: '#c8b192', role: rounded-image}
+  - layout_properties: {grid_position: 'WEYJPK,TQWUIJ'}
+    name: image_1
+    properties: {background: '#c8b192', role: rounded-image, source: _/theme/meat.png}
     type: Image
-    layout_properties: {grid_position: 'WEYJPK,TQWUIJ'}
-  - name: label_1
-    properties: {text: Meat recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null}
+  - layout_properties: {grid_position: 'GSRCDR,FVQOXO'}
+    name: label_1
+    properties: {background: '#e1e1e1', bold: true, font_size: 32, role: null, text: Meat recipes}
     type: Label
-    layout_properties: {grid_position: 'GSRCDR,FVQOXO'}
-- name: spacer_2
-  properties: {height: '64'}
-  type: Spacer
-  layout_properties: {grid_position: 'QPBANS,RLLBIS'}
-- name: column_panel_4
+  layout_properties: {grid_position: 'WPENGH,GBECMX'}
+  name: column_panel_1
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'FFJJDN,XJWHFL'}
-  components:
-  - name: column_panel_5
-    properties: {wrap_on: never}
-    type: ColumnPanel
+- layout_properties: {grid_position: 'QPBANS,RLLBIS'}
+  name: spacer_2
+  properties: {height: '64'}
+  type: Spacer
+- components:
+  - components:
+    - layout_properties: {grid_position: 'BNHPFK,RFGULV'}
+      name: label_2
+      properties: {bold: true, font_size: 18, text: Name}
+      type: Label
     layout_properties: {grid_position: 'PWMTKJ,JFLKNB'}
-    components:
-    - name: label_2
-      properties: {text: Name, bold: true, font_size: 18}
-      type: Label
-      layout_properties: {grid_position: 'BNHPFK,RFGULV'}
-  - name: column_panel_8
+    name: column_panel_5
     properties: {wrap_on: never}
     type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'YZJLFW,WDFWFA'}
+      name: label_5
+      properties: {bold: true, font_size: 18, text: Description}
+      type: Label
     layout_properties: {grid_position: 'PWMTKJ,YNTTAK'}
-    components:
-    - name: label_5
-      properties: {text: Description, bold: true, font_size: 18}
-      type: Label
-      layout_properties: {grid_position: 'YZJLFW,WDFWFA'}
-  - name: column_panel_7
+    name: column_panel_8
     properties: {wrap_on: never}
     type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'OAMKPC,KXPBGO'}
+      name: label_3
+      properties: {bold: true, font: '', font_size: 18, text: Category}
+      type: Label
     layout_properties: {grid_position: 'PWMTKJ,JNLWTK'}
-    components:
-    - name: label_3
-      properties: {font: '', bold: true, text: Category, font_size: 18}
-      type: Label
-      layout_properties: {grid_position: 'OAMKPC,KXPBGO'}
-  - name: column_panel_9
+    name: column_panel_7
     properties: {wrap_on: never}
     type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'NUXUGC,TRIVVP'}
+      name: label_6
+      properties: {bold: true, font_size: 18, text: Preparation Time (Minutes)}
+      type: Label
     layout_properties: {grid_position: 'PWMTKJ,DHTBLI'}
-    components:
-    - name: label_6
-      properties: {text: Preparation Time (Minutes), bold: true, font_size: 18}
-      type: Label
-      layout_properties: {grid_position: 'NUXUGC,TRIVVP'}
-  - name: column_panel_6
+    name: column_panel_9
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'PWMTKJ,XLAZHZ'}
-    components:
-    - name: label_4
-      properties: {text: Recipe, bold: true, font_size: 18}
+  - components:
+    - layout_properties: {grid_position: 'FBRPDW,EDMYIL'}
+      name: label_4
+      properties: {bold: true, font_size: 18, text: Recipe}
       type: Label
-      layout_properties: {grid_position: 'FBRPDW,EDMYIL'}
-  - name: repeating_panel_2
+    layout_properties: {grid_position: 'PWMTKJ,XLAZHZ'}
+    name: column_panel_6
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'ZRPMZW,UKZRSH'}
+    name: repeating_panel_2
     properties: {item_template: Main_page.Meat_category.ItemTemplate4}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'ZRPMZW,UKZRSH'}
-  - name: spacer_4
+  - layout_properties: {grid_position: 'FONCDL,SFVEBC'}
+    name: spacer_4
     properties: {height: '64'}
     type: Spacer
-    layout_properties: {grid_position: 'FONCDL,SFVEBC'}
-- name: column_panel_10
+  layout_properties: {grid_position: 'FFJJDN,XJWHFL'}
+  name: column_panel_4
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'ULNDFM,NAUXED'}
-- name: column_panel_11
+- layout_properties: {grid_position: 'ULNDFM,NAUXED'}
+  name: column_panel_10
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'ULNDFM,EKBNMG'}
-  components:
-  - name: button_1
-    properties: {text: Back, background: '#c8b192', foreground: '#fff', role: elevated-button, align: right, font_size: 16}
-    type: Button
+- components:
+  - event_bindings: {click: button_1_click}
     layout_properties: {grid_position: 'DWRDIR,FZMFYQ'}
-    event_bindings: {click: button_1_click}
-- name: spacer_1
+    name: button_1
+    properties: {align: right, background: '#c8b192', font_size: 16, foreground: '#fff', role: elevated-button, text: Back}
+    type: Button
+  layout_properties: {grid_position: 'ULNDFM,EKBNMG'}
+  name: column_panel_11
+  properties: {wrap_on: never}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'CURHKZ,UWIKFT'}
+  name: spacer_1
   properties: {height: '64'}
   type: Spacer
-  layout_properties: {grid_position: 'CURHKZ,UWIKFT'}
-- name: data_grid_1
-  properties:
-    columns:
-    - {id: JKSDUP, title: Name, data_key: Name}
-    - {id: VJQQOR, title: Description, data_key: Description}
-    - {id: OJLQEN, title: Category, data_key: Category}
-    - {id: OHJDMN, data_key: PreparationTime, title: Preparation Time (minutes)}
-    - {id: FDLTXJ, data_key: Link, title: Ingredients}
-    background: '#c8b192'
-    role: tonal-data-grid
-    visible: false
-  type: DataGrid
-  components:
+- components:
   - name: repeating_panel_1
     properties: {item_template: Main_page.Meat_category.RowTemplate3}
     type: RepeatingPanel
   layout_properties: {grid_position: 'KCADWS,ZAOOJW'}
+  name: data_grid_1
+  properties:
+    background: '#c8b192'
+    columns:
+    - {data_key: Name, id: JKSDUP, title: Name}
+    - {data_key: Description, id: VJQQOR, title: Description}
+    - {data_key: Category, id: OJLQEN, title: Category}
+    - {data_key: PreparationTime, id: OHJDMN, title: Preparation Time (minutes)}
+    - {data_key: Link, id: FDLTXJ, title: Ingredients}
+    role: tonal-data-grid
+    visible: false
+  type: DataGrid
+container:
+  properties: {background: '#e1e1e1'}
+  type: ColumnPanel
 is_package: true

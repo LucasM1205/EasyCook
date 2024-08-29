@@ -72,15 +72,17 @@ class RecipeCard(RecipeCardTemplate):
   def check_box_favorite_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     if self.check_box_favorite.checked:
-      print("Adding to favorites")
-      anvil.server.call('add_to_favorites', self.recipe)
+        print("Adding to favorites")
+        anvil.server.call('add_to_favorites', self.recipe)
     else:
-      print("Removing from favorites")
-      anvil.server.call('remove_from_favorites', self.recipe)
+        print("Removing from favorites")
+        anvil.server.call('remove_from_favorites', self.recipe)
 
-    # Aktualisiere den Favoriten-Status im UI
-    self.update_favorite_status()
+    # Favoriten-Zähler nach der Aktualisierung neu laden
+    self.recipe = anvil.server.call('get_recipe_details', self.recipe['RecipeID'])['recipe']
     self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"
+
+
 
   def button_1_click(self, **event_args):
     """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""

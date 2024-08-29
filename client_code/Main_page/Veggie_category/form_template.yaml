@@ -1,144 +1,144 @@
-container:
-  type: ColumnPanel
-  properties: {background: '#e1e1e1'}
 components:
-- name: column_panel_1
-  properties: {wrap_on: never}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'WPENGH,GBECMX'}
-  components:
-  - name: column_panel_2
+- components:
+  - layout_properties: {grid_position: 'AWWZBY,BGHFPX'}
+    name: column_panel_2
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AWWZBY,BGHFPX'}
-  - name: column_panel_3
+  - layout_properties: {grid_position: 'AWWZBY,VFFFGH'}
+    name: column_panel_3
     properties: {wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AWWZBY,VFFFGH'}
-  - name: link_2
+  - components:
+    - layout_properties: {grid_position: 'IHIXXV,ABRXFF'}
+      name: image_2
+      properties: {horizontal_align: center, source: _/theme/home.png}
+      type: Image
+    event_bindings: {click: link_2_click}
+    layout_properties: {grid_position: 'AWWZBY,BIZMAD'}
+    name: link_2
     properties: {icon_align: right}
     type: Link
-    layout_properties: {grid_position: 'AWWZBY,BIZMAD'}
-    components:
-    - name: image_2
-      properties: {source: _/theme/home.png, horizontal_align: center}
-      type: Image
-      layout_properties: {grid_position: 'IHIXXV,ABRXFF'}
-    event_bindings: {click: link_2_click}
-  - name: image_1
-    properties: {source: _/theme/veggie.png, background: '#c8b192', role: rounded-image}
+  - layout_properties: {grid_position: 'RUIWOS,IOJUSM'}
+    name: image_1
+    properties: {background: '#c8b192', role: rounded-image, source: _/theme/veggie.png}
     type: Image
-    layout_properties: {grid_position: 'RUIWOS,IOJUSM'}
-  - name: label_1
-    properties: {text: Veggie recipes, bold: true, font_size: 32, background: '#e1e1e1', role: null, align: left}
+  - layout_properties: {grid_position: 'SFPGKX,NFXXKT'}
+    name: label_1
+    properties: {align: left, background: '#e1e1e1', bold: true, font_size: 32, role: null, text: Veggie recipes}
     type: Label
-    layout_properties: {grid_position: 'SFPGKX,NFXXKT'}
-  - name: spacer_1
+  - layout_properties: {grid_position: 'RGRIXX,ODCRRB'}
+    name: spacer_1
     properties: {height: '64'}
     type: Spacer
-    layout_properties: {grid_position: 'RGRIXX,ODCRRB'}
-  - name: column_panel_4
-    properties: {wrap_on: never}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'QMQEQC,RDMRBQ'}
-    components:
-    - name: column_panel_5
-      properties: {wrap_on: never}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'GQGGRW,BETQFS'}
-      components:
-      - name: column_panel_6
-        properties: {wrap_on: never}
-        type: ColumnPanel
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'MWQVHL,BVPQSW'}
+          name: label_2
+          properties: {bold: true, font_size: 18, text: Name}
+          type: Label
         layout_properties: {grid_position: 'HATEIW,KOCFFH'}
-        components:
-        - name: label_2
-          properties: {text: Name, font_size: 18, bold: true}
-          type: Label
-          layout_properties: {grid_position: 'MWQVHL,BVPQSW'}
-      - name: column_panel_8
+        name: column_panel_6
         properties: {wrap_on: never}
         type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'DWRYNH,LPGLDB'}
+          name: label_3
+          properties: {bold: true, font_size: 18, text: Description}
+          type: Label
         layout_properties: {grid_position: 'HATEIW,GMLPPG'}
-        components:
-        - name: label_3
-          properties: {font_size: 18, bold: true, text: Description}
-          type: Label
-          layout_properties: {grid_position: 'DWRYNH,LPGLDB'}
-      - name: column_panel_9
+        name: column_panel_8
         properties: {wrap_on: never}
         type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'JWBAFC,OEBVPD'}
+          name: label_4
+          properties: {bold: true, font_size: 18, text: Category}
+          type: Label
         layout_properties: {grid_position: 'HATEIW,OSFFJA'}
-        components:
-        - name: label_4
-          properties: {text: Category, font_size: 18, bold: true}
-          type: Label
-          layout_properties: {grid_position: 'JWBAFC,OEBVPD'}
-      - name: column_panel_10
+        name: column_panel_9
         properties: {wrap_on: never}
         type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'NNRDUF,EVVEZV'}
+          name: label_5
+          properties: {bold: true, font_size: 18, text: Preparation Time (Minutes)}
+          type: Label
         layout_properties: {grid_position: 'HATEIW,HGYTHH'}
-        components:
-        - name: label_5
-          properties: {font_size: 18, bold: true, text: Preparation Time (Minutes)}
-          type: Label
-          layout_properties: {grid_position: 'NNRDUF,EVVEZV'}
-      - name: column_panel_7
+        name: column_panel_10
         properties: {wrap_on: never}
         type: ColumnPanel
-        layout_properties: {grid_position: 'HATEIW,BJPYUD'}
-        components:
-        - name: label_6
-          properties: {text: Recipe, bold: true, font_size: 18}
+      - components:
+        - layout_properties: {grid_position: 'PFAVPL,VEGEBH'}
+          name: label_6
+          properties: {bold: true, font_size: 18, text: Recipe}
           type: Label
-          layout_properties: {grid_position: 'PFAVPL,VEGEBH'}
-      - name: repeating_panel_2
+        layout_properties: {grid_position: 'HATEIW,BJPYUD'}
+        name: column_panel_7
+        properties: {wrap_on: never}
+        type: ColumnPanel
+      - layout_properties: {grid_position: 'YIRHPX,MLKCQK'}
+        name: repeating_panel_2
         properties: {item_template: Main_page.Veggie_category.ItemTemplate6}
         type: RepeatingPanel
-        layout_properties: {grid_position: 'YIRHPX,MLKCQK'}
-  - name: spacer_2
+      layout_properties: {grid_position: 'GQGGRW,BETQFS'}
+      name: column_panel_5
+      properties: {wrap_on: never}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'QMQEQC,RDMRBQ'}
+    name: column_panel_4
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'NAVWZL,CHBIVO'}
+    name: spacer_2
     properties: {height: '64'}
     type: Spacer
-    layout_properties: {grid_position: 'NAVWZL,CHBIVO'}
-- name: column_panel_11
+  layout_properties: {grid_position: 'WPENGH,GBECMX'}
+  name: column_panel_1
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LDPCHS,ETRPUK'}
-- name: column_panel_12
+- layout_properties: {grid_position: 'LDPCHS,ETRPUK'}
+  name: column_panel_11
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LDPCHS,HSCCJT'}
-  components:
-  - name: button_1
-    properties: {text: Back, background: '#c8b192', foreground: '#fff', role: elevated-button, font_size: 16}
+- components:
+  - layout_properties: {grid_position: 'BRNTPR,DYNSLG'}
+    name: button_1
+    properties: {background: '#c8b192', font_size: 16, foreground: '#fff', role: elevated-button, text: Back}
     type: Button
-    layout_properties: {grid_position: 'BRNTPR,DYNSLG'}
-- name: spacer_3
+  layout_properties: {grid_position: 'LDPCHS,HSCCJT'}
+  name: column_panel_12
+  properties: {wrap_on: never}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'BTDYWH,HNSVRI'}
+  name: spacer_3
   properties: {height: '64'}
   type: Spacer
-  layout_properties: {grid_position: 'BTDYWH,HNSVRI'}
-- name: data_grid_1
-  properties:
-    role: tonal-data-grid
-    columns:
-    - {id: JKSDUP, title: Name, data_key: Name}
-    - {id: VJQQOR, title: Description, data_key: Description}
-    - {id: OJLQEN, title: Category, data_key: Category}
-    - {id: MQDMRR, data_key: PreparationTime, title: Preparation Time (minutes)}
-    - {id: ANVTDW, data_key: column_1, title: Ingredients}
-    background: '#c8b192'
-    rows_per_page: 5
-    wrap_on: never
-    foreground: ''
-    show_page_controls: true
-    auto_header: true
-    visible: false
-  type: DataGrid
-  components:
-  - name: repeating_panel_1
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: repeating_panel_1
     properties: {item_template: Main_page.Veggie_category.RowTemplate1, visible: true}
     type: RepeatingPanel
-    event_bindings: {}
-    layout_properties: {}
   layout_properties: {grid_position: 'NZJZZV,SYMITE'}
+  name: data_grid_1
+  properties:
+    auto_header: true
+    background: '#c8b192'
+    columns:
+    - {data_key: Name, id: JKSDUP, title: Name}
+    - {data_key: Description, id: VJQQOR, title: Description}
+    - {data_key: Category, id: OJLQEN, title: Category}
+    - {data_key: PreparationTime, id: MQDMRR, title: Preparation Time (minutes)}
+    - {data_key: column_1, id: ANVTDW, title: Ingredients}
+    foreground: ''
+    role: tonal-data-grid
+    rows_per_page: 5
+    show_page_controls: true
+    visible: false
+    wrap_on: never
+  type: DataGrid
+container:
+  properties: {background: '#e1e1e1'}
+  type: ColumnPanel
 is_package: true

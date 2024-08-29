@@ -1,147 +1,147 @@
-container:
-  type: ColumnPanel
-  properties: {background: '#e1e1e1'}
 components:
-- name: column_panel_8
-  properties: {wrap_on: mobile}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'JYZONS,QNIGEH'}
-  components:
-  - name: column_panel_9
+- components:
+  - layout_properties: {grid_position: 'IUYWQH,IRVPAI'}
+    name: column_panel_9
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'IUYWQH,IRVPAI'}
-  - name: column_panel_10
+  - layout_properties: {grid_position: 'IUYWQH,GDLKEG'}
+    name: column_panel_10
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'IUYWQH,GDLKEG'}
-  - name: link_1
-    properties: {}
-    type: Link
-    layout_properties: {grid_position: 'IUYWQH,SSBJAL'}
-    components:
-    - name: image_4
+  - components:
+    - layout_properties: {grid_position: 'RYGMGS,IDHDKD'}
+      name: image_4
       properties: {source: _/theme/home.png}
       type: Image
-      layout_properties: {grid_position: 'RYGMGS,IDHDKD'}
     event_bindings: {click: link_1_click}
-- name: spacer_4
+    layout_properties: {grid_position: 'IUYWQH,SSBJAL'}
+    name: link_1
+    properties: {}
+    type: Link
+  layout_properties: {grid_position: 'JYZONS,QNIGEH'}
+  name: column_panel_8
+  properties: {wrap_on: mobile}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'OOTTGH,XKNDFB'}
+  name: spacer_4
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'OOTTGH,XKNDFB'}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
-  components:
-  - name: label_1
-    properties: {text: Deselect all the ingredients you don't have at home, bold: true, font_size: 32, align: center}
+- components:
+  - layout_properties: {grid_position: 'WXCSWX,PXYBRR'}
+    name: label_1
+    properties: {align: center, bold: true, font_size: 32, text: Deselect all the ingredients you don't have at home}
     type: Label
-    layout_properties: {grid_position: 'WXCSWX,PXYBRR'}
-  - name: spacer_1
+  - layout_properties: {grid_position: 'SCQWQU,HENZFW'}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'SCQWQU,HENZFW'}
-  - name: column_panel_2
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'YORZTE,DFISDP'}
-    components:
-    - name: image_1
+  - components:
+    - layout_properties: {grid_position: 'PEYEVN,JSXMGQ'}
+      name: image_1
       properties: {role: rounded-image, source: _/theme/tomatos.png}
       type: Image
-      layout_properties: {grid_position: 'PEYEVN,JSXMGQ'}
-  - name: spacer_3
+    layout_properties: {grid_position: 'YORZTE,DFISDP'}
+    name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'YORZTE,PCXOXZ GDRAZK,CQXQQH'}
+    name: spacer_3
     properties: {height: '90'}
     type: Spacer
-    layout_properties: {grid_position: 'YORZTE,PCXOXZ GDRAZK,CQXQQH'}
-  - name: column_panel_3
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'YORZTE,PCXOXZ BCGCCC,YNTUEL'}
-    components:
-    - name: image_2
+  - components:
+    - layout_properties: {grid_position: 'BVSYZE,EYNQUS'}
+      name: image_2
       properties: {role: rounded-image, source: _/theme/flour.png}
       type: Image
-      layout_properties: {grid_position: 'BVSYZE,EYNQUS'}
-  - name: column_panel_4
+    layout_properties: {grid_position: 'YORZTE,PCXOXZ BCGCCC,YNTUEL'}
+    name: column_panel_3
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'YORZTE,XWJYXY'}
-    components:
-    - name: image_3
+  - components:
+    - layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
+      name: image_3
       properties: {role: rounded-image, source: _/theme/noodles.png}
       type: Image
-      layout_properties: {grid_position: 'OVTAQJ,OOJECB'}
-  - name: column_panel_5
-    properties: {background: '#fff', role: tonal-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'BIRZSS,TINHRP'}
-    components:
-    - name: label_2
-      properties: {text: Ingredients, bold: true, font_size: 24}
-      type: Label
-      layout_properties: {grid_position: 'VRSLWF,BVNGVF'}
-    - name: column_panel_6
-      properties: {}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'URIHHL,EPTLPJ'}
-      components:
-      - name: check_box_1
-        properties: {text: Carrots, checked: true, font_size: 18}
-        type: CheckBox
-        layout_properties: {grid_position: 'DLASWD,IJDACL'}
-    - name: check_box_2
-      properties: {text: Chicken, checked: true, font_size: 18}
-      type: CheckBox
-      layout_properties: {grid_position: 'QPUFCV,YYIMDV'}
-    - name: check_box_3
-      properties: {text: Flour, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'DPHJDI,ZNXHDR'}
-    - name: check_box_4
-      properties: {text: Sugar, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'RCYFBF,COWWIE'}
-    - name: check_box_5
-      properties: {text: Olive Oil, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'IMOXXI,TZDWGF'}
-    - name: check_box_6
-      properties: {text: Beef, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'VATHZC,JBSPMA'}
-    - name: check_box_7
-      properties: {text: Onion, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'JRSYMK,YUZTOO'}
-    - name: check_box_9
-      properties: {text: Garlic, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: ''}
-    - name: check_box_8
-      properties: {text: Milk, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: ''}
-    - name: check_box_10
-      properties: {text: Butter, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'ZGDYVI,LZQHEI'}
-    - name: check_box_11
-      properties: {text: Salt, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'NWYSWR,YNZXKP'}
-    - name: check_box_12
-      properties: {text: Pepper, checked: true}
-      type: CheckBox
-      layout_properties: {grid_position: 'DXNEXR,JIALRR'}
-  - name: column_panel_7
+    layout_properties: {grid_position: 'YORZTE,XWJYXY'}
+    name: column_panel_4
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AOUPZM,TYMJLV'}
-    components:
-    - name: spacer_2
+  - components:
+    - layout_properties: {grid_position: 'VRSLWF,BVNGVF'}
+      name: label_2
+      properties: {bold: true, font_size: 24, text: Ingredients}
+      type: Label
+    - components:
+      - layout_properties: {grid_position: 'DLASWD,IJDACL'}
+        name: check_box_1
+        properties: {checked: true, font_size: 18, text: Carrots}
+        type: CheckBox
+      layout_properties: {grid_position: 'URIHHL,EPTLPJ'}
+      name: column_panel_6
+      properties: {}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'QPUFCV,YYIMDV'}
+      name: check_box_2
+      properties: {checked: true, font_size: 18, text: Chicken}
+      type: CheckBox
+    - layout_properties: {grid_position: 'DPHJDI,ZNXHDR'}
+      name: check_box_3
+      properties: {checked: true, text: Flour}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RCYFBF,COWWIE'}
+      name: check_box_4
+      properties: {checked: true, text: Sugar}
+      type: CheckBox
+    - layout_properties: {grid_position: 'IMOXXI,TZDWGF'}
+      name: check_box_5
+      properties: {checked: true, text: Olive Oil}
+      type: CheckBox
+    - layout_properties: {grid_position: 'VATHZC,JBSPMA'}
+      name: check_box_6
+      properties: {checked: true, text: Beef}
+      type: CheckBox
+    - layout_properties: {grid_position: 'JRSYMK,YUZTOO'}
+      name: check_box_7
+      properties: {checked: true, text: Onion}
+      type: CheckBox
+    - layout_properties: {grid_position: ''}
+      name: check_box_9
+      properties: {checked: true, text: Garlic}
+      type: CheckBox
+    - layout_properties: {grid_position: ''}
+      name: check_box_8
+      properties: {checked: true, text: Milk}
+      type: CheckBox
+    - layout_properties: {grid_position: 'ZGDYVI,LZQHEI'}
+      name: check_box_10
+      properties: {checked: true, text: Butter}
+      type: CheckBox
+    - layout_properties: {grid_position: 'NWYSWR,YNZXKP'}
+      name: check_box_11
+      properties: {checked: true, text: Salt}
+      type: CheckBox
+    - layout_properties: {grid_position: 'DXNEXR,JIALRR'}
+      name: check_box_12
+      properties: {checked: true, text: Pepper}
+      type: CheckBox
+    layout_properties: {grid_position: 'BIRZSS,TINHRP'}
+    name: column_panel_5
+    properties: {background: '#fff', role: tonal-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'IGIYWQ,KAHVRC'}
+      name: spacer_2
       properties: {height: '95'}
       type: Spacer
-      layout_properties: {grid_position: 'IGIYWQ,KAHVRC'}
+    layout_properties: {grid_position: 'AOUPZM,TYMJLV'}
+    name: column_panel_7
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'PASLPZ,MVWSNM'}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {background: '#e1e1e1'}
+  type: ColumnPanel
 is_package: true

@@ -128,31 +128,29 @@ def is_favorite(recipe):
 @anvil.server.callable
 def add_to_favorites(recipe):
     user = anvil.users.get_user()
+    # Überprüfen, ob der Favorit bereits existiert
     if not app_tables.favorites.get(user=user, recipe=recipe):
+        # Favoriten hinzufügen
         app_tables.favorites.add_row(user=user, recipe=recipe)
-        #Aktualisieren der Favoritenanzahl
-        if 'FavoritesCount' in recipe:
-            recipe['FavoritesCount'] += 1
-        else:
-            recipe['FavoritesCount'] = 1
-        #recipe.save()
-        # Speichern des Rezepts nach der Änderung
-        recipe.update(FavoritesCount=recipe['FavoritesCount'])
+        # Anzahl der Favoriten für dieses Rezept zählen
+        favorite_count = len(app_tables.favorites.search(recipe=recipe))
+        # Rezept aktualisieren
+        recipe.update(FavoritesCount=favorite_count)
 
 @anvil.server.callable
 def remove_from_favorites(recipe):
     user = anvil.users.get_user()
+    # Suche nach dem Favoriten
     favorite_row = app_tables.favorites.get(user=user, recipe=recipe)
     if favorite_row:
+        # Favoriten löschen
         favorite_row.delete()
-        #Aktualisieren der Favoritenanzahl
-        if 'FavoritesCount' in recipe:
-          recipe['FavoritesCount'] = max(0, recipe['FavoritesCount'] - 1)
-        else:
-          recipe['FavoritesCount'] = 0
-        #recipe.save()
-        # Speichern des Rezepts nach der Änderung
-        recipe.update(FavoritesCount=recipe['FavoritesCount'])
+        # Anzahl der Favoriten für dieses Rezept zählen
+        favorite_count = len(app_tables.favorites.search(recipe=recipe))
+        # Rezept aktualisieren
+        recipe.update(FavoritesCount=favorite_count)
+
+
 
 @anvil.server.callable
 def get_popular_recipes(limit=3):

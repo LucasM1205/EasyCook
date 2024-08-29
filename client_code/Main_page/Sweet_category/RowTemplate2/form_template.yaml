@@ -1,8 +1,8 @@
-is_package: true
-container: {type: DataRowPanel}
 components:
-- name: button_1
-  properties: {text: Press here for further information, background: '#fff'}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {column: PHDUSK}
-  event_bindings: {click: button_1_click}
+  name: button_1
+  properties: {background: '#fff', text: Press here for further information}
+  type: Button
+container: {type: DataRowPanel}
+is_package: true

@@ -1,39 +1,39 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: '', border: ''}
-  data_bindings: []
 components:
-- name: column_panel_1
-  properties: {role: null}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: spacer_1
+- components:
+  - layout_properties: {grid_position: 'EKBQKI,HNCXGU', row_background: ''}
+    name: spacer_1
     properties: {height: '190'}
     type: Spacer
-    layout_properties: {grid_position: 'EKBQKI,HNCXGU', row_background: ''}
-  - name: column_panel_3
+  - components:
+    - layout_properties: {grid_position: 'CILVPH,IZXNAC'}
+      name: label_1
+      properties: {align: center, background: '', font_size: 32, icon_align: left, role: null, text: 'Are you Hungry?'}
+      type: Label
+    data_bindings: []
+    layout_properties: {grid_position: 'SRRIJC,UXHNVF'}
+    name: column_panel_3
     properties: {background: '#c8b192', border: '', role: tonal-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'SRRIJC,UXHNVF'}
-    components:
-    - name: label_1
-      properties: {text: 'Are you Hungry?', icon_align: left, align: center, font_size: 32, background: '', role: null}
-      type: Label
-      layout_properties: {grid_position: 'CILVPH,IZXNAC'}
-    data_bindings: []
-  - name: spacer_2
+  - layout_properties: {grid_position: 'ICSBVO,WQOPDI'}
+    name: spacer_2
     properties: {height: '95'}
     type: Spacer
-    layout_properties: {grid_position: 'ICSBVO,WQOPDI'}
-- name: column_panel_2
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties: {role: null}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: get_started_click}
+    layout_properties: {full_width_row: false, grid_position: 'IWTANK,YQLSWP', row_background: ''}
+    name: get_started
+    properties: {background: '#c8b192', bold: false, font: '', font_size: 32, foreground: '#000', italic: false, role: elevated-button, spacing_above: none, spacing_below: large, text: Get Started}
+    type: Button
+  layout_properties: {slot: default}
+  name: column_panel_2
   properties: {}
   type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: get_started
-    properties: {role: elevated-button, bold: false, spacing_above: none, background: '#c8b192', font: '', foreground: '#000', spacing_below: large, italic: false, font_size: 32, text: Get Started}
-    type: Button
-    layout_properties: {grid_position: 'IWTANK,YQLSWP', full_width_row: false, row_background: ''}
-    event_bindings: {click: get_started_click}
+container:
+  data_bindings: []
+  properties: {background: '', border: '', html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

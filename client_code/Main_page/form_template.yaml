@@ -1,235 +1,235 @@
-container:
-  type: ColumnPanel
-  properties: {background: '#e1e1e1', wrap_on: mobile, visible: true}
 components:
-- name: column_panel_header
-  properties: {wrap_on: never}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'TPQLYS,ONRXPA'}
-  components:
-  - name: spacer_1
+- components:
+  - layout_properties: {grid_position: 'IGTWFO,ACMZUK'}
+    name: spacer_1
     properties: {height: '95'}
     type: Spacer
-    layout_properties: {grid_position: 'IGTWFO,ACMZUK'}
-  - name: image_1
+  - layout_properties: {grid_position: 'OYSETM,DHQEHU'}
+    name: image_1
     properties: {source: _/theme/EasyCook_logo.png}
     type: Image
-    layout_properties: {grid_position: 'OYSETM,DHQEHU'}
-- name: spacer_2
-  properties: {height: '95'}
-  type: Spacer
-  layout_properties: {grid_position: 'CVVICK,GVWXJX'}
-- name: column_panel_section0
+  layout_properties: {grid_position: 'TPQLYS,ONRXPA'}
+  name: column_panel_header
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'NLVPEV,CAINMI'}
-  components:
-  - name: column_panel
-    properties: {background: '#fff', role: tonal-card, wrap_on: never}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'WMTVJK,JBKDLV'}
-    components:
-    - name: label_1
-      properties: {text: Search for Recipe, bold: true, font_size: 24}
+- layout_properties: {grid_position: 'CVVICK,GVWXJX'}
+  name: spacer_2
+  properties: {height: '95'}
+  type: Spacer
+- components:
+  - components:
+    - layout_properties: {grid_position: 'WXZSXZ,RLXIAQ'}
+      name: label_1
+      properties: {bold: true, font_size: 24, text: Search for Recipe}
       type: Label
-      layout_properties: {grid_position: 'WXZSXZ,RLXIAQ'}
-    - name: label_10
+    - layout_properties: {grid_position: 'RRHHYG,JWLNTF'}
+      name: label_10
       properties:
         text: |
           You can search by recipe names, descriptions, or ingredients. For example, try typing 'pasta' to find recipes with pasta in the title or as an ingredient. Please note that ingredients might have different names or variations. For instance, 'pasta' could also be referred to as 'noodles'. Try different terms to ensure the best results.
       type: Label
-      layout_properties: {grid_position: 'RRHHYG,JWLNTF'}
-    - name: search_box
-      properties: {background: '#c8b192', foreground: '#ffff', role: rounded-textbox, align: left}
-      type: TextBox
+    - event_bindings: {change: search_box_change, pressed_enter: search_box_pressed_enter}
       layout_properties: {grid_position: 'OLIRDA,IMNCIK'}
-      event_bindings: {change: search_box_change, pressed_enter: search_box_pressed_enter}
-    - name: search_results_panel
+      name: search_box
+      properties: {align: left, background: '#c8b192', foreground: '#ffff', role: rounded-textbox}
+      type: TextBox
+    - layout_properties: {grid_position: 'QIAJUM,HADBSV'}
+      name: search_results_panel
       properties: {item_template: Main_page.SearchResultItem}
       type: RepeatingPanel
-      layout_properties: {grid_position: 'QIAJUM,HADBSV'}
-- name: column_panel_section1
+    layout_properties: {grid_position: 'WMTVJK,JBKDLV'}
+    name: column_panel
+    properties: {background: '#fff', role: tonal-card, wrap_on: never}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'NLVPEV,CAINMI'}
+  name: column_panel_section0
   properties: {wrap_on: never}
   type: ColumnPanel
-  layout_properties: {grid_position: 'PGCHBU,NTZTYU'}
-  components:
-  - name: spacer_3
+- components:
+  - layout_properties: {grid_position: 'CDZEJO,NAUOXW'}
+    name: spacer_3
     properties: {height: '95'}
     type: Spacer
-    layout_properties: {grid_position: 'CDZEJO,NAUOXW'}
-  - name: column_panel_1
-    properties: {role: tonal-card, background: '#c8b192', wrap_on: never}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'XTJHHJ,XTSUOI'}
-    components:
-    - name: label_2
-      properties: {text: Quickly find a Recipe with Ingredients you have at Home, bold: true, background: '', font_size: 32, foreground: '#fff', align: left}
+  - components:
+    - layout_properties: {grid_position: 'IIYYAO,BKIMZQ'}
+      name: label_2
+      properties: {align: left, background: '', bold: true, font_size: 32, foreground: '#fff', text: Quickly find a Recipe with Ingredients you have at Home}
       type: Label
-      layout_properties: {grid_position: 'IIYYAO,BKIMZQ'}
-    - name: column_panel_6
-      properties: {wrap_on: never}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'DOWBLV,GTEXSE'}
-      components:
-      - name: spacer_5
+    - components:
+      - layout_properties: {grid_position: 'SOVOGB,QMRTWN LFRFRX,HZKPWL'}
+        name: spacer_5
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'SOVOGB,QMRTWN LFRFRX,HZKPWL'}
-      - name: elevated_button_1
-        properties: {text: Find a recepie, role: elevated-button, bold: true, font_size: 24, background: '#fff'}
-        type: Button
+      - event_bindings: {click: elevated_button_1_click}
         layout_properties: {grid_position: 'SOVOGB,QMRTWN HVDVQB,RBSIVT'}
-        event_bindings: {click: elevated_button_1_click}
-      - name: image_2
-        properties: {role: rounded-image, source: _/theme/Saghetti.png, display_mode: shrink_to_fit, vertical_align: center, spacing_above: none, spacing_below: none}
+        name: elevated_button_1
+        properties: {background: '#fff', bold: true, font_size: 24, role: elevated-button, text: Find a recepie}
+        type: Button
+      - layout_properties: {grid_position: 'SOVOGB,TNUAPP'}
+        name: image_2
+        properties: {display_mode: shrink_to_fit, role: rounded-image, source: _/theme/Saghetti.png, spacing_above: none, spacing_below: none, vertical_align: center}
         type: Image
-        layout_properties: {grid_position: 'SOVOGB,TNUAPP'}
-  - name: spacer_4
+      layout_properties: {grid_position: 'DOWBLV,GTEXSE'}
+      name: column_panel_6
+      properties: {wrap_on: never}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'XTJHHJ,XTSUOI'}
+    name: column_panel_1
+    properties: {background: '#c8b192', role: tonal-card, wrap_on: never}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'TMLPVD,PCYJVG'}
+    name: spacer_4
     properties: {height: '95'}
     type: Spacer
-    layout_properties: {grid_position: 'TMLPVD,PCYJVG'}
-  - name: column_panel_section2
-    properties: {background: '#e1e1e1', wrap_on: never}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'BFWUEX,ODCTAZ'}
-    components:
-    - name: column_panel_8
-      properties: {wrap_on: never}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'LPKDER,PGXGBM'}
-      components:
-      - name: label_3
-        properties: {text: Categories, bold: true, font_size: 32}
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'DUYQUM,DKVWYG'}
+        name: label_3
+        properties: {bold: true, font_size: 32, text: Categories}
         type: Label
-        layout_properties: {grid_position: 'DUYQUM,DKVWYG'}
-    - name: column_panel_10
+      layout_properties: {grid_position: 'LPKDER,PGXGBM'}
+      name: column_panel_8
       properties: {wrap_on: never}
       type: ColumnPanel
-      layout_properties: {grid_position: ',XPLQTZ'}
-      components:
-      - name: image_3
-        properties: {role: rounded-image, source: _/theme/veggie.png, background: '#c8b192'}
+    - components:
+      - layout_properties: {grid_position: 'YDMEUI,LDLTOB'}
+        name: image_3
+        properties: {background: '#c8b192', role: rounded-image, source: _/theme/veggie.png}
         type: Image
-        layout_properties: {grid_position: 'YDMEUI,LDLTOB'}
-      - name: elevated_button_2
-        properties: {text: Veggie, role: elevated-button, font_size: 18, bold: false, background: '#fff'}
-        type: Button
+      - event_bindings: {click: elevated_button_2_click}
         layout_properties: {grid_position: 'HTQQAT,HBPDKP'}
-        event_bindings: {click: elevated_button_2_click}
-    - name: column_panel_11
+        name: elevated_button_2
+        properties: {background: '#fff', bold: false, font_size: 18, role: elevated-button, text: Veggie}
+        type: Button
+      layout_properties: {grid_position: ',XPLQTZ'}
+      name: column_panel_10
       properties: {wrap_on: never}
       type: ColumnPanel
-      layout_properties: {grid_position: ',JIHSYW'}
-      components:
-      - name: image_4
-        properties: {role: rounded-image, background: '#c8b192', source: _/theme/meat.png}
+    - components:
+      - layout_properties: {grid_position: 'ONXUBI,DGUQHO'}
+        name: image_4
+        properties: {background: '#c8b192', role: rounded-image, source: _/theme/meat.png}
         type: Image
-        layout_properties: {grid_position: 'ONXUBI,DGUQHO'}
-      - name: elevated_button_3
-        properties: {text: Meat, role: elevated-button, font_size: 18, bold: false, background: '#fff'}
-        type: Button
+      - event_bindings: {click: elevated_button_3_click}
         layout_properties: {grid_position: 'ENBSLE,WGRZBO'}
-        event_bindings: {click: elevated_button_3_click}
-    - name: column_panel_9
+        name: elevated_button_3
+        properties: {background: '#fff', bold: false, font_size: 18, role: elevated-button, text: Meat}
+        type: Button
+      layout_properties: {grid_position: ',JIHSYW'}
+      name: column_panel_11
       properties: {wrap_on: never}
       type: ColumnPanel
-      layout_properties: {grid_position: ',UMGAJK'}
-      components:
-      - name: image_5
-        properties: {role: rounded-image, background: '#c8b192', source: _/theme/dessert.png, vertical_align: top}
+    - components:
+      - layout_properties: {grid_position: 'DLJQPJ,IKKQGG'}
+        name: image_5
+        properties: {background: '#c8b192', role: rounded-image, source: _/theme/dessert.png, vertical_align: top}
         type: Image
-        layout_properties: {grid_position: 'DLJQPJ,IKKQGG'}
-      - name: elevated_button_4
-        properties: {text: Sweets, role: elevated-button, font_size: 18, bold: false, background: '#fff'}
-        type: Button
+      - event_bindings: {click: elevated_button_4_click}
         layout_properties: {grid_position: 'HEDYDE,RGEINO'}
-        event_bindings: {click: elevated_button_4_click}
-    - name: spacer_6
+        name: elevated_button_4
+        properties: {background: '#fff', bold: false, font_size: 18, role: elevated-button, text: Sweets}
+        type: Button
+      layout_properties: {grid_position: ',UMGAJK'}
+      name: column_panel_9
+      properties: {wrap_on: never}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'SSJZXB,IDGDUB'}
+      name: spacer_6
       properties: {height: '95'}
       type: Spacer
-      layout_properties: {grid_position: 'SSJZXB,IDGDUB'}
-  - name: column_panel_section3
-    properties: {wrap_on: never}
+    layout_properties: {grid_position: 'BFWUEX,ODCTAZ'}
+    name: column_panel_section2
+    properties: {background: '#e1e1e1', wrap_on: never}
     type: ColumnPanel
-    layout_properties: {grid_position: 'EZMTAW,VDIGBZ'}
-    components:
-    - name: label_4
-      properties: {text: Popular Today, font_size: 32, bold: true}
+  - components:
+    - layout_properties: {grid_position: 'NPJOMA,XGVZKM'}
+      name: label_4
+      properties: {bold: true, font_size: 32, text: Popular Today}
       type: Label
-      layout_properties: {grid_position: 'NPJOMA,XGVZKM'}
-    - name: column_panel_popular
-      properties: {role: tonal-card, background: '#e1e1e1', wrap_on: never}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'ZFNPMJ,LPLPBS'}
-      components:
-      - name: popular_recipes_panel
+    - components:
+      - layout_properties: {grid_position: 'ADOQCS,RGYLSB'}
+        name: popular_recipes_panel
         properties: {item_template: Main_page.PopularRecipeItem}
         type: RepeatingPanel
-        layout_properties: {grid_position: 'ADOQCS,RGYLSB'}
-      - name: spacer_7
+      - layout_properties: {grid_position: 'PQNDDL,EFTFCI'}
+        name: spacer_7
         properties: {height: '95'}
         type: Spacer
-        layout_properties: {grid_position: 'PQNDDL,EFTFCI'}
-      - name: label_5
-        properties: {text: My Favorites, font_size: 32, bold: true}
+      - layout_properties: {grid_position: 'JGPQEI,DRAFNG'}
+        name: label_5
+        properties: {bold: true, font_size: 32, text: My Favorites}
         type: Label
-        layout_properties: {grid_position: 'JGPQEI,DRAFNG'}
-      - name: column_panel_2
+      - components:
+        - components:
+          - layout_properties: {grid_position: 'OZWMQH,VPJPTK'}
+            name: label_6
+            properties: {bold: true, font_size: 18, text: Name}
+            type: Label
+          layout_properties: {grid_position: 'DSGCEQ,XYKCFD'}
+          name: column_panel_3
+          properties: {wrap_on: never}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'RBXIJQ,VGZZRN'}
+            name: label_7
+            properties: {bold: true, font_size: 18, text: Category}
+            type: Label
+          layout_properties: {grid_position: 'DSGCEQ,RAEGUU'}
+          name: column_panel_4
+          properties: {wrap_on: never}
+          type: ColumnPanel
+        - components:
+          - layout_properties: {grid_position: 'HLDDMF,MSKVFV'}
+            name: label_8
+            properties: {bold: true, font_size: 18, text: Recipe, visible: true}
+            type: Label
+          layout_properties: {grid_position: 'DSGCEQ,TFRUWG'}
+          name: column_panel_5
+          properties: {wrap_on: never}
+          type: ColumnPanel
+        layout_properties: {grid_position: 'ELWSGW,QIPHCW'}
+        name: column_panel_2
         properties: {wrap_on: never}
         type: ColumnPanel
-        layout_properties: {grid_position: 'ELWSGW,QIPHCW'}
-        components:
-        - name: column_panel_3
-          properties: {wrap_on: never}
-          type: ColumnPanel
-          layout_properties: {grid_position: 'DSGCEQ,XYKCFD'}
-          components:
-          - name: label_6
-            properties: {text: Name, font_size: 18, bold: true}
-            type: Label
-            layout_properties: {grid_position: 'OZWMQH,VPJPTK'}
-        - name: column_panel_4
-          properties: {wrap_on: never}
-          type: ColumnPanel
-          layout_properties: {grid_position: 'DSGCEQ,RAEGUU'}
-          components:
-          - name: label_7
-            properties: {text: Category, font_size: 18, bold: true}
-            type: Label
-            layout_properties: {grid_position: 'RBXIJQ,VGZZRN'}
-        - name: column_panel_5
-          properties: {wrap_on: never}
-          type: ColumnPanel
-          layout_properties: {grid_position: 'DSGCEQ,TFRUWG'}
-          components:
-          - name: label_8
-            properties: {text: Recipe, font_size: 18, visible: true, bold: true}
-            type: Label
-            layout_properties: {grid_position: 'HLDDMF,MSKVFV'}
-      - name: favorites_repeating_panel
+      - layout_properties: {grid_position: 'MJSBPL,SCCQEZ'}
+        name: favorites_repeating_panel
         properties: {item_template: Main_page.FavoriteRecipeItem, role: null}
         type: RepeatingPanel
-        layout_properties: {grid_position: 'MJSBPL,SCCQEZ'}
-      - name: spacer_8
+      - layout_properties: {grid_position: 'SHEJUO,EBDJEO'}
+        name: spacer_8
         properties: {height: '95'}
         type: Spacer
-        layout_properties: {grid_position: 'SHEJUO,EBDJEO'}
-    - name: column_panel_7
+      layout_properties: {grid_position: 'ZFNPMJ,LPLPBS'}
+      name: column_panel_popular
+      properties: {background: '#e1e1e1', role: tonal-card, wrap_on: never}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'PHQBBA,HVJIYL'}
+        name: label_9
+        properties: {align: center, bold: true, font_size: 32, text: 'Do you have a Recipe Idea?'}
+        type: Label
+      - event_bindings: {click: button_1_click}
+        layout_properties: {grid_position: 'HCENDC,DQKRRI'}
+        name: button_1
+        properties: {align: full, background: '#fff', bold: true, font_size: 18, role: elevated-button, text: Share it with us!}
+        type: Button
+      - layout_properties: {grid_position: 'KJAIAD,SPYNHZ'}
+        name: spacer_9
+        properties: {height: '95'}
+        type: Spacer
+      layout_properties: {grid_position: 'VAHPQB,RLMJXD'}
+      name: column_panel_7
       properties: {wrap_on: never}
       type: ColumnPanel
-      layout_properties: {grid_position: 'VAHPQB,RLMJXD'}
-      components:
-      - name: label_9
-        properties: {text: 'Do you have a Recipe Idea?', bold: true, font_size: 32, align: center}
-        type: Label
-        layout_properties: {grid_position: 'PHQBBA,HVJIYL'}
-      - name: button_1
-        properties: {text: Share it with us!, font_size: 18, bold: true, role: elevated-button, align: full, background: '#fff'}
-        type: Button
-        layout_properties: {grid_position: 'HCENDC,DQKRRI'}
-        event_bindings: {click: button_1_click}
-      - name: spacer_9
-        properties: {height: '95'}
-        type: Spacer
-        layout_properties: {grid_position: 'KJAIAD,SPYNHZ'}
+    layout_properties: {grid_position: 'EZMTAW,VDIGBZ'}
+    name: column_panel_section3
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'PGCHBU,NTZTYU'}
+  name: column_panel_section1
+  properties: {wrap_on: never}
+  type: ColumnPanel
+container:
+  properties: {background: '#e1e1e1', visible: true, wrap_on: mobile}
+  type: ColumnPanel
 is_package: true

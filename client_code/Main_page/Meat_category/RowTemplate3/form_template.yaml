@@ -1,10 +1,10 @@
-is_package: true
-container:
-  type: DataRowPanel
-  properties: {background: ''}
 components:
-- name: button_1
-  properties: {text: Press here for further information, border: '', background: '#fff', foreground: '', role: null, icon: ''}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {column: FDLTXJ}
-  event_bindings: {click: button_1_click}
+  name: button_1
+  properties: {background: '#fff', border: '', foreground: '', icon: '', role: null, text: Press here for further information}
+  type: Button
+container:
+  properties: {background: ''}
+  type: DataRowPanel
+is_package: true

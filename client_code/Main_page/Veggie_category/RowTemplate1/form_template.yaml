@@ -1,11 +1,11 @@
-is_package: true
-container:
-  type: DataRowPanel
-  properties: {auto_display_data: true, background: ''}
-  data_bindings: []
 components:
-- name: button_1
-  properties: {text: Press here for further information, border: '', foreground: '', background: '#ffff'}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {column: ANVTDW}
-  event_bindings: {click: button_1_click}
+  name: button_1
+  properties: {background: '#ffff', border: '', foreground: '', text: Press here for further information}
+  type: Button
+container:
+  data_bindings: []
+  properties: {auto_display_data: true, background: ''}
+  type: DataRowPanel
+is_package: true

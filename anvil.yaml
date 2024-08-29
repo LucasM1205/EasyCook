@@ -63,6 +63,9 @@ db_schema:
     - admin_ui: {width: 200}
       name: Quantity
       type: number
+    - admin_ui: {order: -0.25, width: 200}
+      name: R_ID
+      type: number
     server: full
     title: RecipeIngredients
   recipes:

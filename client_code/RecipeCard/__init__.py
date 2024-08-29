@@ -27,16 +27,37 @@ class RecipeCard(RecipeCardTemplate):
     self.label_preparation.text = details['PreparationSteps']
     self.label_prep_time.text = f"Preparation Time: {self.recipe['PreparationTime']} Minutes"
 
-
     #Lade die Anzahl der Favoriten
     self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"
-    
     
     # Lade die Kommentare
     self.load_comments()
     
     # Überprüfe, ob das Rezept bereits ein Favorit ist
     self.update_favorite_status()
+
+    # Setze den Schwierigkeitsgrad
+    self.set_difficulty_label()
+
+  def set_difficulty_label(self):
+    difficulty = self.recipe['Difficulty'].lower() 
+        
+    if difficulty == 'easy':
+      difficulty_text = "Easy"
+      difficulty_color = '#92d050'
+    elif difficulty == 'medium':
+      difficulty_text = "Medium"
+      difficulty_color = '#ffa500'  # Orange als Alternative zu Gelb
+    elif difficulty == 'hard':
+      difficulty_text = "Hard"
+      difficulty_color = '#ff0000'  # Rot für "Hard"
+    else:
+      difficulty_text = "Unknown"
+      difficulty_color = '#000000'  # Standardfarbe für unbekannte Schwierigkeitsgrade
+
+    # Setze den Text und die Farbe
+    self.label_difficulty.text = f"{difficulty_text}"
+    self.label_difficulty.foreground = difficulty_color
 
   def load_comments(self):
     comments = anvil.server.call('get_comments_for_recipe', self.recipe['RecipeID'])
@@ -47,7 +68,6 @@ class RecipeCard(RecipeCardTemplate):
             comment['username_display'] = 'Unknown User'  # Setze einen Standardwert
     self.repeating_panel_comments.items = comments
 
-  
   def format_ingredients(self, ingredients):
     return "\n".join([f"{ing['quantity']} {ing['unit']} {ing['name']}" for ing in ingredients])
   
@@ -81,8 +101,6 @@ class RecipeCard(RecipeCardTemplate):
     # Favoriten-Zähler nach der Aktualisierung neu laden
     self.recipe = anvil.server.call('get_recipe_details', self.recipe['RecipeID'])['recipe']
     self.label_favorites_count.text = f"{self.recipe['FavoritesCount']} People's favourite"
-
-
 
   def button_1_click(self, **event_args):
     """Wird aufgerufen, wenn der Button geklickt wird, um einen Kommentar hinzuzufügen"""

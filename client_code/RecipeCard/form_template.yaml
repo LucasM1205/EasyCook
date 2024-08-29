@@ -36,7 +36,21 @@ components:
     name: column_panel_6
     properties: {wrap_on: never}
     type: ColumnPanel
-  - layout_properties: {grid_position: 'LDKWIY,ALWTOH'}
+  - components:
+    - layout_properties: {grid_position: 'ZUQFBZ,XBIXJB'}
+      name: label_5
+      properties: {align: left, text: 'Difficulty:'}
+      type: Label
+    - layout_properties: {grid_position: 'ZUQFBZ,KMESQI'}
+      name: label_difficulty
+      properties: {}
+      type: Label
+    layout_properties: {grid_position: 'LDKWIY,UUCYOF'}
+    name: column_panel_8
+    properties: {wrap_on: never}
+    type: ColumnPanel
+  - components: []
+    layout_properties: {grid_position: 'LDKWIY,HFTAKC'}
     name: column_panel_5
     properties: {wrap_on: never}
     type: ColumnPanel

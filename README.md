@@ -1,6 +1,6 @@
 # About EasyCook
 
-EasyCook is a recipe management application developed as part of the "Project I" module in the Bachelor of Science in Business Informatics at the Technical University of Central Hesse. The app was built using the Anvil low-code platform to gain hands-on experience with modern development tools.
+<!--EasyCook is a recipe management application developed as part of the "Project I" module in the Bachelor of Science in Business Informatics at the Technical University of Central Hesse. The app was built using the Anvil low-code platform to gain hands-on experience with modern development tools.-->
 
 ### Table of Contents
 1. Overview

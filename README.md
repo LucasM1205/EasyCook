@@ -23,7 +23,7 @@ EasyCook is a user-friendly application that allows users to manage recipes, sea
 - **Favorites Management**: Users can mark recipes as favorites and manage their favorite recipes.
 - **Recipe Suggestions**: Users can suggest new recipes to be added to the application.
 - **Comments**: Users can add comments to recipes.
-- **Ingredient Management**: Manage and link ingredients to recipes.
+- **Ingredient Management**: Manage and link ingredients to recipes in the backend.
 - **Recipe Categorization**: Recipes are categorized by difficulty and visualized accordingly.
 
 ### Technologies

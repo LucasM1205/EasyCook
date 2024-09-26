@@ -80,3 +80,23 @@ The App uses a SQL Database with the following tables:
 - **signed_up**: datetime
 - **remembered_logins**: simpleObject
 - **email_confirmation_key**: string
+
+## Server Functions
+
+The application contains several server-side functions that handle the core business logic:
+
+- **`search_recipes(keyword)`**: Searches for recipes by keywords in names, descriptions, and ingredients.
+- **`add_ingredient(name, category, unit)`**: Adds a new ingredient to the database.
+- **`add_recipe(name, description, category, preparation_time)`**: Adds a new recipe to the database.
+- **`add_recipe_ingredient(recipe_id, ingredient_id, quantity)`**: Links an ingredient to a recipe.
+- **`get_ingredients_for_recipe(recipe_id)`**: Retrieves ingredients for a specific recipe.
+- **`get_recipes_by_ingredients(selected_ingredients)`**: Searches for recipes that contain specific ingredients.
+- **`get_recipe_details(recipe_id)`**: Retrieves details of a specific recipe, including ingredients, steps, and image.
+- **`is_favorite(recipe)`**: Checks if a recipe is in the current user's favorites.
+- **`add_to_favorites(recipe)`**: Adds a recipe to the current user's favorites and updates the favorites count.
+- **`remove_from_favorites(recipe)`**: Removes a recipe from the current user's favorites and updates the favorites count.
+- **`get_popular_recipes(limit=3)`**: Retrieves the recipes with the most favorites.
+- **`get_favorite_recipes()`**: Retrieves the favorite recipes of the current user.
+- **`add_comment(recipe_id, comment_text)`**: Adds a comment to a recipe.
+- **`get_comments_for_recipe(recipe_id)`**: Retrieves comments for a specific recipe.
+- **`send_recipe_suggestion(name, description, duration, ingredients, preparation_steps)`**: Sends a recipe suggestion via email to the administrator.

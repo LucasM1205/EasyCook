@@ -15,7 +15,7 @@
 10. Contributors
 11. License
 
-### Overview
+## Overview
 EasyCook is a user-friendly application that allows users to manage recipes, search by ingredients, and suggest new recipes. The application provides an easy way to favorite recipes and add comments.
 
 ### Features

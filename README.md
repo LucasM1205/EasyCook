@@ -100,3 +100,43 @@ The application contains several server-side functions that handle the core busi
 - **`add_comment(recipe_id, comment_text)`**: Adds a comment to a recipe.
 - **`get_comments_for_recipe(recipe_id)`**: Retrieves comments for a specific recipe.
 - **`send_recipe_suggestion(name, description, duration, ingredients, preparation_steps)`**: Sends a recipe suggestion via email to the administrator.
+
+## Usage Notes
+
+To use EasyCook successfully, ensure the database is correctly set up and all dependencies are met. Start the application and log in to access the full features.
+
+## Cloning the App
+
+To clone this app, follow these steps:
+
+1. Go to the [Anvil Editor](https://anvil.works/build?utm_source=github:app_README) (you might need to sign up for a free account) and click on "Clone from GitHub" (underneath the "Blank App" option):
+
+    ![Clone from GitHub](https://anvil.works/docs/version-control-new-ide/img/git/clone-from-github.png)
+
+2. Enter the URL of this GitHub repository. If you're not yet logged in, choose "GitHub credentials" as the authentication method and click "Connect to GitHub".
+
+    ![Clone App from Git modal](https://anvil.works/docs/version-control-new-ide/img/git/clone-app-from-git.png)
+
+3. Finally, click "Clone App".
+
+This app will then be in your Anvil account, ready for you to run it or start editing it! **Any changes you make will be automatically pushed back to this repository, if you have permission!** You might want to [make a new branch](https://anvil.works/docs/version-control-new-ide?utm_source=github:app_README).
+
+## Running the App Yourself
+
+To run the app, find the **Run** button at the top-right of the Anvil editor:
+
+![Run button](https://anvil.works/docs/img/run-button-new-ide.png)
+
+## Reference Documentation
+
+The Anvil reference documentation provides comprehensive information on how to use Anvil to build web applications. You can find the documentation [here](https://anvil.works/docs/overview?utm_source=github:app_README).
+
+If you want to get to the basics as quickly as possible, each section of this documentation features a [Quick-Start Guide](https://anvil.works/docs/overview/quickstarts?utm_source=github:app_README).
+
+## Contributors
+
+- **Lucas Kaczmarczyk**: Lead Developer
+
+## License
+
+This project was developed for the "Project I" module and is not subject to any specific licensing terms.
